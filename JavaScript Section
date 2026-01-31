@@ -1,0 +1,8 @@
+<h2>JavaScript Demo</h2>
+<button onclick="welcome()">Click Me</button>
+
+<script>
+function welcome() {
+  alert("Welcome to Kinza's Website 🌸");
+}
+</script>
