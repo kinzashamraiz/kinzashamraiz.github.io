@@ -1,0 +1,22 @@
+Header
+  - Logo / Name (left)
+  - Menu (right): Home | About | Projects | Contact
+
+Hero Section
+  - Big Intro: “Hi, I’m Kinzash, a Web Developer”
+  - Call-to-action button: “See My Work”
+
+About Section
+  - Small profile photo
+  - Short bio / skills
+
+Projects Section
+  - Grid of projects (3 per row on desktop, 1 per row on mobile)
+  - Each project: Image + Name + Short description + Link
+
+Contact Section
+  - Email / LinkedIn / GitHub icons
+  - Contact form (optional)
+
+Footer
+  - Copyright + small link back to top
