@@ -74,6 +74,10 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
 .card h3 {color:#1b263b; margin-bottom:12px;}
 .card p {color:#555;}
 
+/* Progress Bars */
+.progress-bar {background:#ddd; border-radius:8px; height:10px; margin-top:10px;}
+.progress {height:10px; border-radius:8px; background:#1b263b;}
+
 /* Intro Section */
 .intro-box {
     background:white;
@@ -160,13 +164,25 @@ footer a {color:#f0f4f8; font-weight:600;}
 
 <div class="container">
 
-    <!-- Skills -->
+    <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>My Skills</h2>
         <div class="cards">
-            <div class="card"><h3>Web Development</h3><p>HTML, CSS, JavaScript, React basics.</p></div>
-            <div class="card"><h3>Programming</h3><p>Python, Java basics, data structures.</p></div>
-            <div class="card"><h3>Design</h3><p>UI/UX concepts, Figma, prototyping.</p></div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Building responsive websites using HTML, CSS, and JavaScript.</p>
+                <div class="progress-bar"><div class="progress" style="width:90%;"></div></div>
+            </div>
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Proficient in Python and Java, including algorithms and data structures.</p>
+                <div class="progress-bar"><div class="progress" style="width:75%;"></div></div>
+            </div>
+            <div class="card">
+                <h3>UI/UX Design</h3>
+                <p>Designing modern interfaces and prototypes using Figma and Adobe XD.</p>
+                <div class="progress-bar"><div class="progress" style="width:80%;"></div></div>
+            </div>
         </div>
     </section>
 
@@ -180,21 +196,21 @@ footer a {color:#f0f4f8; font-weight:600;}
         </div>
     </section>
 
-    <!-- Article -->
+    <!-- Article Section -->
     <section id="article">
         <h2>Digital Influence: How Social Media Shapes Health</h2>
         <div class="intro-box">
             <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
-            <p>Social media platforms like Instagram, Facebook, TikTok, and Twitter are now essential to daily life. They enable instant communication, entertainment, and access to vast knowledge. However, studies show excessive use can negatively impact mental, emotional, and physical health.</p>
+            <p>Social media platforms like Instagram, Facebook, TikTok, and Twitter are integral to modern life. They allow instant communication, entertainment, and access to vast information. Excessive use can negatively impact mental, emotional, and physical health.</p>
             <div class="article-highlight"><strong>Mental Health Effects:</strong> Anxiety, depression, and stress can result from constant comparison, cyberbullying, and social pressures online.</div>
-            <div class="article-highlight"><strong>Sleep Disturbances:</strong> Late-night scrolling disrupts natural sleep cycles, leading to fatigue and reduced academic performance.</div>
-            <div class="article-highlight"><strong>Physical Health:</strong> Prolonged screen time causes eye strain, headaches, and promotes a sedentary lifestyle.</div>
+            <div class="article-highlight"><strong>Sleep Disturbances:</strong> Late-night scrolling disrupts natural sleep cycles, causing fatigue and reduced academic performance.</div>
+            <div class="article-highlight"><strong>Physical Health:</strong> Prolonged screen time can cause eye strain, headaches, and sedentary lifestyle risks.</div>
             <div class="article-highlight"><strong>Emotional & Social Impacts:</strong> Exposure to curated content may create FOMO, loneliness, and reduce satisfaction with real-life experiences.</div>
             <div class="article-highlight"><strong>Conclusion:</strong> Social media is a double-edged sword. Responsible usage, balanced screen time, offline activities, and awareness are key to maintaining health.</div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2>Contact Me</h2>
         <form onsubmit="submitForm(event)">
@@ -205,7 +221,6 @@ footer a {color:#f0f4f8; font-weight:600;}
         </form>
         <p class="email-link">Or email me directly at: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
     </section>
-
 </div>
 
 <!-- Footer -->
@@ -225,4 +240,4 @@ function submitForm(e){
 }
 </script>
 </body>
-                                                                         </html>
+</html>
