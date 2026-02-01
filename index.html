@@ -30,7 +30,27 @@
         top:0;
         z-index:100;
     }
-    nav .logo {color:white; font-weight:700; font-size:1.2em;}
+
+    /* Hamburger menu (left) */
+    .menu-toggle {
+        display:none;
+        flex-direction:column;
+        cursor:pointer;
+        gap:4px;
+    }
+    .menu-toggle div {
+        width:25px;
+        height:3px;
+        background:white;
+    }
+
+    nav .logo {
+        color:white;
+        font-weight:700;
+        font-size:1.2em;
+        margin-left:15px;
+    }
+
     nav ul {
         display:flex;
         list-style:none;
@@ -44,22 +64,11 @@
     }
     nav ul li a:hover {background:#0d1b2a;}
 
-    /* Hamburger menu (right side) */
-    .menu-toggle {
-        display:none;
-        flex-direction:column;
-        cursor:pointer;
-        gap:4px;
-    }
-    .menu-toggle div {
-        width:25px;
-        height:3px;
-        background:white;
-    }
     @media(max-width:768px){
         nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:50px; left:0; padding:10px 0;}
         nav ul.active {display:flex;}
         .menu-toggle {display:flex;}
+        .logo {margin-left:10px;}
     }
 
     /* Container & Sections */
@@ -86,8 +95,19 @@
     }
     .contact-section button:hover {background:#0d1b2a;}
 
+    .contact-section p.email-link {
+        margin-top:15px;
+        font-size:1em;
+        color:#0d1b2a;
+    }
+    .contact-section p.email-link a {
+        color:#1b263b;
+        font-weight:600;
+    }
+
     /* Footer */
     footer {background:#1b263b; color:white; text-align:center; padding:20px; border-top:3px solid #0d1b2a;}
+    footer a {color:#f0f4f8; font-weight:600;}
 
     @media(max-width:768px){
         .cards {flex-direction:column;}
@@ -104,18 +124,20 @@
 
 <!-- Navigation -->
 <nav>
-    <div class="logo">Portfolio</div>
+    <div style="display:flex; align-items:center;">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logo">Portfolio</div>
+    </div>
     <ul id="nav-links">
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 </nav>
 
 <div class="container">
@@ -156,12 +178,16 @@
             <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <p class="email-link">Or email me directly at: 
+           <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
+        </p>
     </section>
 </div>
 
 <!-- Footer -->
 <footer>
-    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
+    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus | 
+    Email: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
 </footer>
 
 <script>
@@ -170,7 +196,7 @@
         document.getElementById('nav-links').classList.toggle('active');
     }
 
-    // Contact form
+    // Contact form submission
     function submitForm(event){
         event.preventDefault();
         const name = document.getElementById('name').value;
@@ -182,4 +208,4 @@
 </script>
 
 </body>
-</html>
+   </html>
