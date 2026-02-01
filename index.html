@@ -13,7 +13,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f7f9fc;
+            background: #eaeaea;
             color: #333;
         }
         a {
@@ -23,11 +23,10 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e90ff, #4fc3f7);
-            color: white;
+            background: #0d1b2a;
+            color: #ffffff;
             padding: 60px 20px;
             text-align: center;
-            border-bottom: 5px solid #1976d2;
         }
         header h1 {
             font-size: 2.8em;
@@ -35,14 +34,14 @@
         }
         header p {
             font-size: 1.1em;
-            color: #e0f7fa;
+            color: #a8b0c0;
         }
 
         /* Navigation */
         nav {
             display: flex;
             justify-content: center;
-            background-color: #ffffffcc;
+            background-color: #1b263b;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
@@ -51,14 +50,13 @@
         nav a {
             padding: 15px 25px;
             margin: 5px;
-            color: #1e90ff;
+            color: #ffffff;
             font-weight: 600;
             border-radius: 8px;
             transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
-            background-color: #1e90ff;
-            color: white;
+            background-color: #0d1b2a;
         }
 
         /* Container */
@@ -68,66 +66,42 @@
             padding: 0 20px;
         }
 
-        /* Intro Section */
+        /* Intro / Article Section */
         .intro-section {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
             background-color: #ffffff;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             margin-bottom: 40px;
         }
-        .intro-text {
-            flex: 1 1 400px;
-        }
-        .intro-text h2 {
+        .intro-section h2 {
             font-size: 2em;
-            color: #1e90ff;
+            color: #0d1b2a;
             margin-bottom: 20px;
         }
-        .intro-text p {
+        .intro-section p {
             font-size: 1.1em;
             line-height: 1.7;
             margin-bottom: 20px;
-            color: #555;
+            color: #555555;
         }
-        .intro-text button {
-            padding: 12px 25px;
-            font-size: 1em;
-            color: white;
-            background-color: #1e90ff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .intro-text button:hover {
-            background-color: #1976d2;
-        }
-        .intro-image {
-            flex: 1 1 300px;
-            text-align: center;
-        }
-        .intro-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        .intro-section p.article-highlight {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-left: 4px solid #1b263b;
+            border-radius: 6px;
         }
 
         /* Contact Section */
         .contact-section {
             background-color: #ffffff;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             margin-bottom: 40px;
         }
         .contact-section h2 {
-            color: #1e90ff;
+            color: #0d1b2a;
             margin-bottom: 25px;
             font-size: 2em;
         }
@@ -148,35 +122,24 @@
             padding: 12px 25px;
             font-size: 1em;
             color: white;
-            background-color: #1e90ff;
+            background-color: #1b263b;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.3s;
         }
         .contact-section button:hover {
-            background-color: #1976d2;
+            background-color: #0d1b2a;
         }
 
         /* Footer */
         footer {
-            background-color: #1e90ff;
+            background-color: #1b263b;
             color: white;
             text-align: center;
             padding: 20px;
             margin-top: 50px;
-            border-top: 3px solid #1976d2;
-        }
-
-        /* Responsive */
-        @media(max-width:768px){
-            .intro-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .intro-image img {
-                max-width: 300px;
-            }
+            border-top: 3px solid #0d1b2a;
         }
     </style>
 </head>
@@ -195,16 +158,12 @@
 
     <!-- Main Container -->
     <div class="container">
-        <!-- Introduction Section -->
+        <!-- Introduction / Article Section -->
         <section id="about" class="intro-section">
-            <div class="intro-text">
-                <h2>Welcome to My Personal Website</h2>
-                <p>Hello! I am Kinza Shamraiz, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and learning new things every day. This website is my personal space to showcase my journey, skills, and projects.</p>
-                <button onclick="showAlert()">Learn More</button>
-            </div>
-            <div class="intro-image">
-                <img src="images (15).jpeg" alt="Kinza Shamraiz">
-            </div>
+            <h2>Professional Introduction</h2>
+            <p>Welcome to my personal website! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
+            <p class="article-highlight">This website serves as my professional portfolio, highlighting my projects, skills, and academic journey. It also includes insights into topics I explore and articles I write.</p>
+            <p>Here you can explore my work, contact me for collaboration, or learn more about my studies and achievements.</p>
         </section>
 
         <!-- Contact Section -->
@@ -226,10 +185,6 @@
 
     <!-- JavaScript -->
     <script>
-        function showAlert() {
-            alert("Welcome to my website! Explore my skills, projects, and more.");
-        }
-
         function submitForm(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
@@ -240,4 +195,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
