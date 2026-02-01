@@ -7,273 +7,181 @@
     <title>My Website</title>
 
     <!-- Google verification meta tag -->
-    <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g" />
-</head>
-<!DOCTYPE html>
+    <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g"
+        head>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinza Shamraiz - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f4f7fa;
             color: #333;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e1bee7 100%); /* Light grey to light lavender gradient */
+            line-height: 1.6;
         }
         header {
-            background: #424242; /* Grey for header */
-            color: white;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #ecf0f1;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        nav h1 {
-            margin: 0;
-            font-size: 1.5em;
-            font-weight: 500;
-            color: #9c27b0; /* Lavender accent */
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #9c27b0; /* Lavender hover */
-        }
-        main {
-            margin-top: 70px;
-            padding: 20px; /* Reduced padding */
+            padding: 20px;
         }
         section {
-            max-width: 1200px;
-            margin: 0 auto 20px auto; /* Reduced margin between sections */
-            padding: 40px 20px;
-            background: white;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        #intro {
-            text-align: center;
-            background: linear-gradient(135deg, #424242 0%, #616161 100%); /* Grey gradient */
-            color: white;
-            margin-top: 0;
+        h1, h2 {
+            color: #2c3e50;
         }
-        #intro h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: 700; /* Bold */
-            border-bottom: 2px solid #9c27b0; /* Line under heading */
-            padding-bottom: 10px;
-        }
-        #intro p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 400;
-        }
-        #education {
-            text-align: center;
-        }
-        #education h2 {
-            color: #424242; /* Grey */
-            font-weight: 700; /* Bold */
-            border-bottom: 2px solid #9c27b0; /* Line under heading */
-            padding-bottom: 10px;
-        }
-        #skills {
+        .skills {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            gap: 10px;
         }
         .skill {
-            background: #f5f5f5; /* Light grey */
-            color: #424242;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-            text-align: center;
-            width: 200px;
-            border: 1px solid #e0e0e0;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .skill:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            background: #9c27b0; /* Lavender on hover */
-            color: white;
-        }
-        #articles h2 {
-            text-align: center;
-            color: #424242; /* Grey */
-            font-weight: 700; /* Bold */
-            border-bottom: 2px solid #9c27b0; /* Line under heading */
-            padding-bottom: 10px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
         }
         .article {
-            margin-bottom: 20px; /* Reduced margin */
-        }
-        .article h3 {
-            color: #333;
-            font-weight: 700; /* Bold */
-            border-bottom: 1px solid #e0e0e0; /* Line under subheading */
-            padding-bottom: 5px;
-        }
-        .article .meta {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
         }
         .article img {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto; /* Reduced margin */
-            display: block;
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        #contact {
+        figure {
+            margin: 20px 0;
             text-align: center;
         }
-        #contact h2 {
-            color: #424242; /* Grey */
-            font-weight: 700; /* Bold */
-            border-bottom: 2px solid #9c27b0; /* Line under heading */
-            padding-bottom: 10px;
+        figcaption {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
         }
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
-        #contact input, #contact textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1em;
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 16px;
         }
-        #contact button {
-            background: #424242; /* Grey */
-            color: white;
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
             border: none;
-            padding: 12px 24px;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s;
+            font-size: 16px;
         }
-        #contact button:hover {
-            background: #9c27b0; /* Lavender hover */
+        button:hover {
+            background-color: #2980b9;
         }
         footer {
-            background: #424242; /* Grey */
-            color: white;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
             padding: 20px;
-            margin-top: 20px; /* Reduced margin */
+            margin-top: 40px;
         }
         footer a {
-            color: #9c27b0;
+            color: #3498db;
             text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-            nav ul {
-                margin-top: 10px;
-            }
-            nav ul li {
-                margin-left: 0;
-                margin-right: 15px;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Kinza Shamraiz</h1>
-            <ul>
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Kinza Shamraiz</h1>
+        <p>a tech enthusiast and web developer passionate about building meaningful digital experiences.</p>
     </header>
-
-    <main>
-        <section id="intro">
-            <h2>Hello! I am Kinza Shamraiz</h2>
-            <p>a tech enthusiast and web developer passionate about building meaningful digital experiences. This portfolio showcases my professional projects, collaboration opportunities, research articles, and contributions to the digital domain. Explore my work, read my articles, and reach out for collaboration opportunities.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Home</h2>
+            <p>This portfolio showcases my professional projects, collaboration opportunities, research articles, and contributions to the digital domain. Explore my work, read my articles, and reach out for collaboration opportunities.</p>
         </section>
-
         <section id="education">
             <h2>Education</h2>
             <p>I am currently a student at COMSATS University Islamabad Abbottabad Campus.</p>
         </section>
-
         <section id="skills">
             <h2>My Skills</h2>
-            <div class="skill">Java</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Web Development</div>
-            <div class="skill">Articles & Blogging</div>
-            <div class="skill">HTML</div>
-            <div class="skill">JavaScript</div>
+            <div class="skills">
+                <span class="skill">Java</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Web Development</span>
+                <span class="skill">Articles & Blogging</span>
+                <span class="skill">HTML</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Articles & Blog</span>
+            </div>
         </section>
-
         <section id="articles">
             <h2>Articles & Blog</h2>
-            <div class="article">
+            <article class="article">
                 <h3>The Double-Edged Sword: Social Media's Profound Impact on Mental and Physical Health</h3>
-                <div class="meta">By Kinza Shamraiz | Published on February 1, 2026</div>
-                <img src="images (15).jpeg" alt="Social Media Positive Impact Illustration">
+                <p>By Kinza Shamraiz | Published on February 1, 2026</p>
+                <figure>
+                    <img src="images (15).jpeg" alt="Social Media Positive Impact Illustration">
+                    <figcaption>Social Media Positive Impact Illustration</figcaption>
+                </figure>
                 <p>In the digital age, social media has become an integral part of daily life, connecting billions worldwide. However, its influence extends far beyond communication, profoundly affecting both mental and physical health. While it fosters community and awareness, it also poses risks like anxiety, depression, and sedentary lifestyles. This article explores the multifaceted impact of social media on health, backed by research and real-world examples.</p>
                 <p>Social media can enhance mental well-being by providing support networks. Platforms like Instagram and Twitter allow users to share experiences, reducing isolation. Studies, such as those from the American Psychological Association, show that online communities help individuals with mental health issues feel less alone. Additionally, it promotes mindfulness through apps like Headspace, integrated into social feeds.</p>
                 <p>Conversely, excessive use leads to cyberbullying, FOMO (Fear Of Missing Out), and addiction. A 2023 Pew Research study found that 59% of teens report anxiety from social media. The constant comparison to curated lives exacerbates body image issues and low self-esteem, contributing to conditions like depression.</p>
                 <p>Physically, social media encourages sedentary behavior. Users spend hours scrolling, leading to obesity and poor posture. Research from the Journal of the American Medical Association links screen time to disrupted sleep patterns, affecting overall health. On the positive side, platforms disseminate health information, promoting fitness challenges and nutrition awareness.</p>
                 <p>To mitigate harms, experts recommend digital detoxes and mindful usage. Apps with built-in timers and parental controls can help. Education on digital literacy is crucial for fostering healthy interactions.</p>
-            </div>
+            </article>
         </section>
-
         <section id="contact">
             <h2>Contact Me</h2>
             <p>Reach out for collaboration opportunities or inquiries.</p>
-            <form id="contactForm">
+            <form action="#" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -281,101 +189,9 @@
             </form>
             <p>Email: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
         </section>
-    </main>
-
+    </div>
     <footer>
         <p>&copy; 2026 Kinza Shamraiz. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Two-Color Website</title>
-    <style>
-        /* Unique two-color combination: Deep Teal (#008080) and Vibrant Coral (#FF6B6B) */
-        /* These are complementary colors for a modern, eye-catching look. */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #008080; /* Deep Teal background */
-            color: #FF6B6B; /* Vibrant Coral text */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #FF6B6B; /* Vibrant Coral header */
-            color: #008080; /* Deep Teal text */
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            flex: 1;
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #FF6B6B; /* Vibrant Coral footer */
-            color: #008080; /* Deep Teal text */
-            padding: 10px;
-            text-align: center;
-        }
-        button {
-            background-color: #FF6B6B;
-            color: #008080;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #008080;
-            color: #FF6B6B;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Unique Website</h1>
-    </header>
-    <main>
-        <p>This is a simple webpage with a header, footer, and a unique two-color scheme: Deep Teal and Vibrant Coral.</p>
-        <button id="colorToggle">Toggle Colors</button>
-    </main>
-    <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
-    <script>
-        // JavaScript to toggle colors for interactivity
-        const button = document.getElementById('colorToggle');
-        button.addEventListener('click', () => {
-            document.body.classList.toggle('alt-colors');
-        });
-    </script>
-</body>
-</html>
-     
