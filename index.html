@@ -188,57 +188,79 @@ footer a {color:#f0f4f8; font-weight:600;}
         </div>
     </section>
 
-    <!-- Article -->
-    <section id="article">
-        <h2>Digital Influence: Social Media and Health</h2>
-        <div class="intro-box">
-            <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
-            <p>Social media is a cornerstone of modern communication, connecting millions of people instantly. Platforms such as Instagram, Facebook, and TikTok provide entertainment, information, and social interaction. While beneficial in moderation, excessive use has been linked to adverse health effects.</p>
-            <p class="article-highlight"><strong>Mental Health:</strong> Frequent social media use can increase anxiety, depression, and stress due to constant comparison with others and exposure to negative content.</p>
-            <p class="article-highlight"><strong>Sleep Patterns:</strong> Late-night scrolling disrupts natural sleep cycles, leading to fatigue, reduced focus, and lowered academic or work performance.</p>
-            <p class="article-highlight"><strong>Physical Health:</strong> Extended screen time contributes to eye strain, headaches, and a sedentary lifestyle.</p>
-            <p class="article-highlight"><strong>Emotional and Social Impacts:</strong> Constant exposure to curated content may trigger FOMO (fear of missing out), loneliness, and dissatisfaction with real-life experiences.</p>
-            <p class="article-highlight"><strong>Conclusion:</strong> Social media is a double-edged sword. Responsible use, screen-time management, offline activities, and self-awareness are essential for maintaining well-being.</p>
-        </div>
-    </section>
+    <header>
+    <h1>Digital Life and Its Impact on Human Health</h1>
+    <p>Understanding how social media influences our mental and physical well-being</p>
+    <!-- Image added immediately below heading -->
+    <img src="images/15.jpg" alt="Social Media Impact on Health" class="article-img">
+</header>
 
-    <!-- Skills -->
-    <section id="skills" class="skills-section">
-        <h2>Skills & Expertise</h2>
-        <div class="cards">
-            <div class="card"><h3>Web Development</h3><p>Proficient in HTML, CSS, JavaScript, and responsive web design.</p></div>
-            <div class="card"><h3>Programming</h3><p>Experienced in Python, Java, and problem-solving with algorithms.</p></div>
-            <div class="card"><h3>Digital Design</h3><p>UI/UX design principles, prototyping, and user-centered design.</p></div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <form onsubmit="submitForm(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p class="email-link">Or email me directly at: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
-    </section>
+    <h2>Introduction</h2>
+    <p>
+        In today’s digital age, social media has become an essential part of everyday life.
+        Platforms like Facebook, Instagram, TikTok, and WhatsApp help people connect, share ideas,
+        and stay informed. However, excessive use of social media can significantly affect both
+        mental and physical health.
+    </p>
+
+    <h2>Positive Effects of Social Media on Health</h2>
+    <p>
+        Social media is not entirely harmful. When used responsibly, it can have several positive
+        impacts on health:
+    </p>
+    <ul>
+        <li>Provides emotional support through online communities</li>
+        <li>Spreads health awareness and educational content</li>
+        <li>Helps reduce loneliness by staying connected with family and friends</li>
+        <li>Encourages healthy lifestyle trends such as fitness and self-care</li>
+    </ul>
+
+    <h2>Negative Effects of Social Media on Health</h2>
+    <p>
+        Despite its benefits, overuse of social media can lead to serious health issues:
+    </p>
+    <ul>
+        <li>Anxiety, depression, and low self-esteem</li>
+        <li>Sleep disorders due to excessive screen time</li>
+        <li>Eye strain and poor posture</li>
+        <li>Addiction and reduced productivity</li>
+    </ul>
+
+    <h2>Impact on Mental Health</h2>
+    <p>
+        Constant comparison with others, cyberbullying, and the pressure to maintain a perfect
+        online image can negatively affect mental health. Teenagers and young adults are
+        particularly vulnerable to these effects.
+    </p>
+
+    <h2>How to Use Social Media in a Healthy Way</h2>
+    <p>
+        To protect health while enjoying social media, users should follow balanced habits:
+    </p>
+    <ul>
+        <li>Limit daily screen time</li>
+        <li>Take regular breaks from digital platforms</li>
+        <li>Follow positive and informative content</li>
+        <li>Maintain real-life social interactions</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        Social media is a powerful tool that can influence health in both positive and negative
+        ways. The key lies in mindful and responsible usage. By maintaining balance, individuals
+        can enjoy the benefits of social media while protecting their mental and physical health.
+    </p>
+
+    <!-- Author Section -->
+    <div class="author">
+        <strong>Written by:</strong> Kinza Shamraiz <br>
+        <strong>Date:</strong> 31 January 2026
+    </div>
+
 </div>
 
-<!-- Footer -->
 <footer>
-    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
+    © 2026 Kinza Shamraiz | All Rights Reserved
 </footer>
-
-<script>
-function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
-function submitForm(e){
-    e.preventDefault();
-    const name=document.getElementById('name').value;
-    const email=document.getElementById('email').value;
-    alert(`Thank you, ${name}! Your message has been sent.\nWe will contact you at ${email}.`);
-    e.target.reset();
-}
-</script>
-</body>
-</html>
