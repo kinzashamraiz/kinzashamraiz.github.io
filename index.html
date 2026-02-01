@@ -9,15 +9,8 @@
     <!-- Google verification meta tag -->
     <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g" />
 </head>
-<body>
-    <!-- Ye hai BODY section -->
-    <h1>Welcome to my site</h1>
-    <p>This is my article content...</p>
-</body>
-</html>
 
-
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -90,6 +83,15 @@ section p {font-size:1em; line-height:1.7; color:#555; margin-bottom:15px;}
 }
 
 /* Article Section */
+.article-box {
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    max-width:900px;
+    margin:20px auto;
+}
+.article-meta {font-size:0.85em; color:#888; margin-bottom:15px;}
 .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:12px; margin-bottom:20px;}
 .article-highlight {
     background:#f0f4f8;
@@ -182,184 +184,70 @@ footer a {color:#f0f4f8; font-weight:600;}
     <section id="intro">
         <h2>Professional Introduction</h2>
         <div class="intro-box">
-            <p>Hello! I am <strong>Kinza Shamraiz</strong>, a tech enthusiast and web developer. I am passionate about creating meaningful digital experiences through coding and design.</p>
-            <p class="article-highlight">This portfolio highlights my professional projects, research articles, collaboration opportunities, and contributions to the digital domain.</p>
+            <p>Hello! I am <strong>Kinza Shamraiz</strong>, a tech enthusiast and web developer passionate about building meaningful digital experiences.</p>
+            <p class="article-highlight">This portfolio showcases my professional projects, collaboration opportunities, research articles, and contributions to the digital domain.</p>
             <p>Explore my work, read my articles, and reach out for collaboration opportunities.</p>
         </div>
     </section>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Digital Life and Its Impact on Human Health</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Article -->
+    <section id="article">
+        <h2>Digital Influence on Health: How Social Media Shapes Minds and Bodies</h2>
+        <div class="article-box">
+            <p class="article-meta">By Kinza Shamraiz | 1 February 2026</p>
+            <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
+            
+            <p>Social media has revolutionized how we communicate, learn, and entertain ourselves. Platforms like Instagram, Facebook, and TikTok are highly engaging, connecting millions globally. However, excessive usage can have serious implications for mental, emotional, and physical health.</p>
+            
+            <p class="article-highlight"><strong>Mental Health:</strong> Continuous exposure to social media content can trigger anxiety, depression, and stress due to comparison with others and negative interactions online.</p>
+            
+            <p class="article-highlight"><strong>Sleep Patterns:</strong> Late-night browsing disrupts sleep cycles, resulting in fatigue, reduced focus, and lower productivity.</p>
+            
+            <p class="article-highlight"><strong>Physical Health:</strong> Prolonged screen time leads to eye strain, headaches, and promotes a sedentary lifestyle.</p>
+            
+            <p class="article-highlight"><strong>Emotional & Social Impacts:</strong> Exposure to curated posts can create FOMO (fear of missing out), loneliness, and dissatisfaction with real-life experiences.</p>
+            
+            <p class="article-highlight"><strong>Conclusion:</strong> Social media is a double-edged sword. Mindful usage, balanced screen time, offline engagement, and self-awareness are key to preserving health and wellbeing.</p>
+        </div>
+    </section>
 
-    <!-- CSS -->
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.7;
-        }
+    <!-- Skills -->
+    <section id="skills" class="skills-section">
+        <h2>Skills & Expertise</h2>
+        <div class="cards">
+            <div class="card"><h3>Web Development</h3><p>HTML, CSS, JavaScript, responsive design.</p></div>
+            <div class="card"><h3>Programming</h3><p>Python, Java, algorithms, and problem solving.</p></div>
+            <div class="card"><h3>Digital Design</h3><p>UI/UX design, prototyping, and user-centered design principles.</p></div>
+        </div>
+    </section>
 
-        header {
-            background: linear-gradient(135deg, #4a90e2, #357abd);
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        header p {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-
-        header img {
-            width: 100%;
-            max-width: 700px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .intro {
-            font-size: 16px;
-            margin-top: 20px;
-            color: #eee;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #357abd;
-            margin-top: 30px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .author {
-            margin-top: 40px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
-            font-size: 14px;
-            color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #222;
-            color: #aaa;
-            font-size: 13px;
-            margin-top: 30px;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>Digital Life and Its Impact on Human Health</h1>
-    <p>Understanding the hidden effects of social media on our mind and body</p>
-
-    <!-- Main Image -->
-    <img src="images/15.jpg" alt="Social Media Impact on Health">
-
-    <!-- Personal Intro -->
-    <p class="intro">
-        Hi, I’m <strong>Kinza Shamraiz</strong>. I’m passionate about health, technology, and lifestyle. 
-        Through this article, I aim to explore how social media affects our mental and physical well-being 
-        and share tips for using it in a healthy way.
-    </p>
-</header>
-
-<div class="container">
-
-    <h2>Introduction</h2>
-    <p>
-        Social media has become an integral part of our daily lives. Platforms like Facebook, Instagram, 
-        TikTok, and WhatsApp allow us to connect, share ideas, and stay informed. However, excessive usage 
-        can impact mental health, sleep patterns, and even physical well-being.
-    </p>
-
-    <h2>Positive Effects of Social Media</h2>
-    <p>
-        While social media often gets a bad reputation, it has its benefits when used wisely:
-    </p>
-    <ul>
-        <li>Provides emotional support through online communities</li>
-        <li>Spreads health awareness and educational content</li>
-        <li>Helps maintain relationships and reduce loneliness</li>
-        <li>Encourages fitness and healthy lifestyle trends</li>
-    </ul>
-
-    <h2>Negative Effects of Social Media</h2>
-    <p>
-        Overuse of social media can lead to several problems, including:
-    </p>
-    <ul>
-        <li>Anxiety, depression, and low self-esteem</li>
-        <li>Sleep disturbances due to late-night scrolling</li>
-        <li>Eye strain and poor posture</li>
-        <li>Reduced productivity and potential addiction</li>
-    </ul>
-
-    <h2>Impact on Mental Health</h2>
-    <p>
-        Social media often creates pressure to appear perfect, leading to constant comparison and stress. 
-        Cyberbullying and negative comments can also harm self-confidence, especially for teenagers and young adults.
-    </p>
-
-    <h2>How to Use Social Media Healthily</h2>
-    <ul>
-        <li>Limit daily screen time and take regular breaks</li>
-        <li>Follow positive and informative content</li>
-        <li>Engage in real-life social interactions</li>
-        <li>Practice mindfulness and self-care offline</li>
-    </ul>
-
-    <h2>Conclusion</h2>
-    <p>
-        Social media is a powerful tool that can influence our lives positively or negatively. 
-        By using it responsibly and mindfully, we can enjoy its benefits while protecting 
-        our mental and physical health.
-    </p>
-
-    <!-- Author Section -->
-    <div class="author">
-        <strong>Written by:</strong> Kinza Shamraiz <br>
-        <strong>Date:</strong> 31 January 2026
-    </div>
-
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p class="email-link">Or email me directly at: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
+    </section>
 </div>
 
+<!-- Footer -->
 <footer>
-    © 2026 Kinza Shamraiz | All Rights Reserved
+    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
 </footer>
 
+<script>
+function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
+function submitForm(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value;
+    const email=document.getElementById('email').value;
+    alert(`Thank you, ${name}! Your message has been sent.\nWe will contact you at ${email}.`);
+    e.target.reset();
+}
+</script>
 </body>
-</html>
+</html>           
