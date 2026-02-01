@@ -14,11 +14,11 @@ a {text-decoration:none; color:inherit;}
 header {
     background:#0d1b2a;
     color:white;
-    padding:60px 20px;
+    padding:40px 20px;
     text-align:center;
 }
-header h1 {font-size:3em; margin-bottom:10px;}
-header p {font-size:1.1em; color:#a8b0c0; font-style:italic;}
+header h1 {font-size:2em; margin-bottom:5px;}
+header p {font-size:0.9em; color:#a8b0c0; font-style:italic;}
 
 /* Navigation */
 nav {
@@ -26,58 +26,44 @@ nav {
     justify-content:space-between;
     align-items:center;
     background:#1b263b;
-    padding:12px 20px;
+    padding:10px 20px;
     position:sticky;
     top:0;
     z-index:100;
 }
-nav .logo {color:white; font-weight:700; font-size:1.2em;}
+nav .logo {color:white; font-weight:700; font-size:1em;}
 nav ul {display:flex; list-style:none; gap:15px;}
-nav ul li a {color:white; padding:8px 12px; border-radius:6px; transition:0.3s;}
+nav ul li a {color:white; padding:6px 10px; border-radius:6px; transition:0.3s;}
 nav ul li a:hover {background:#0d1b2a;}
 
 /* Hamburger menu for mobile */
 .menu-toggle {display:none; flex-direction:column; gap:4px; cursor:pointer;}
 .menu-toggle div {width:25px; height:3px; background:white;}
 @media(max-width:768px){
-    nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:52px; left:0;}
+    nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:42px; left:0;}
     nav ul.active {display:flex;}
     .menu-toggle {display:flex;}
 }
 
 /* Sections */
-.container {max-width:1100px; margin:40px auto; padding:0 20px;}
+.container {max-width:1100px; margin:30px auto; padding:0 20px;}
 section {margin-bottom:50px;}
-section h2 {font-size:2.2em; color:#0d1b2a; margin-bottom:25px; text-align:center; position:relative;}
+section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px; text-align:center; position:relative;}
 section h2::after {
     content:'';
     width:60px;
     height:3px;
     background:#1b263b;
     display:block;
-    margin:10px auto 0;
+    margin:8px auto 0;
     border-radius:3px;
 }
-section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
+section p {font-size:1em; line-height:1.7; color:#555; margin-bottom:15px;}
 
-/* Cards */
-.cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;}
-.card {
-    background:white;
-    flex:1 1 280px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.08);
-    transition:transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12);}
-.card h3 {color:#1b263b; margin-bottom:12px;}
-.card p {color:#555;}
-
-/* Intro Section */
+/* Intro Box */
 .intro-box {
     background:white;
-    padding:35px;
+    padding:30px;
     border-radius:12px;
     box-shadow:0 6px 20px rgba(0,0,0,0.08);
     max-width:900px;
@@ -94,10 +80,24 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
     margin-bottom:15px;
 }
 
+/* Skills Section */
+.skills-section .cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;}
+.skills-section .card {
+    background:white;
+    flex:1 1 280px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+.skills-section .card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12);}
+.skills-section .card h3 {color:#1b263b; margin-bottom:12px;}
+.skills-section .card p {color:#555;}
+
 /* Contact Section */
 .contact-section {
     text-align:center;
-    padding:50px 20px;
+    padding:40px 20px;
     background:#e1e8f0;
     border-radius:12px;
     max-width:800px;
@@ -130,7 +130,7 @@ footer {background:#1b263b; color:white; text-align:center; padding:20px;}
 footer a {color:#f0f4f8; font-weight:600;}
 
 @media(max-width:768px){
-    .cards {flex-direction:column; align-items:center;}
+    .skills-section .cards {flex-direction:column; align-items:center;}
 }
 </style>
 </head>
@@ -148,11 +148,12 @@ footer a {color:#f0f4f8; font-weight:600;}
         <div class="menu-toggle" onclick="toggleMenu()">
             <div></div><div></div><div></div>
         </div>
-        <div class="logo">Portfolio</div>
+        <div class="logo">Menu</div>
     </div>
     <ul id="nav-links">
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#article">Article</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -162,23 +163,33 @@ footer a {color:#f0f4f8; font-weight:600;}
     <section id="intro">
         <h2>Professional Introduction</h2>
         <div class="intro-box">
-            <p>Welcome! I am <strong>Kinza Shamraiz</strong>, passionate about technology, web development, and creating meaningful digital experiences.</p>
-            <p class="article-highlight">This portfolio showcases my professional projects, articles, collaboration opportunities, and accomplishments in the digital domain.</p>
-            <p>Explore my work, connect for collaboration, and learn more about my projects and featured articles.</p>
+            <p>Hello! I am <strong>Kinza Shamraiz</strong>, a tech enthusiast and web developer. I am passionate about creating meaningful digital experiences through coding and design.</p>
+            <p class="article-highlight">This portfolio highlights my professional projects, research articles, collaboration opportunities, and contributions to the digital domain.</p>
+            <p>Explore my work, read my articles, and reach out for collaboration opportunities.</p>
         </div>
     </section>
 
     <!-- Article -->
     <section id="article">
-        <h2>Social Media Impact on Health</h2>
+        <h2>Digital Influence: Social Media and Health</h2>
         <div class="intro-box">
             <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
-            <p>Social media platforms like Instagram, Facebook, TikTok, and Twitter are integral to modern life. They allow instant communication, entertainment, and access to vast information. Excessive use can negatively impact mental, emotional, and physical health.</p>
-            <div class="article-highlight"><strong>Mental Health Effects:</strong> Frequent social media use can trigger anxiety, depression, and stress due to constant comparison and cyberbullying.</div>
-            <div class="article-highlight"><strong>Sleep Disturbances:</strong> Late-night scrolling disrupts sleep cycles, causing fatigue and lower academic performance.</div>
-            <div class="article-highlight"><strong>Physical Health Implications:</strong> Prolonged screen time causes eye strain, headaches, and sedentary lifestyle risks.</div>
-            <div class="article-highlight"><strong>Emotional & Social Impacts:</strong> Exposure to curated content may create FOMO, loneliness, and reduce satisfaction with real-life experiences.</div>
-            <div class="article-highlight"><strong>Conclusion:</strong> Social media is a double-edged sword. Responsible usage, balanced screen time, offline activities, and awareness are key to maintaining health.</div>
+            <p>Social media is a cornerstone of modern communication, connecting millions of people instantly. Platforms such as Instagram, Facebook, and TikTok provide entertainment, information, and social interaction. While beneficial in moderation, excessive use has been linked to adverse health effects.</p>
+            <p class="article-highlight"><strong>Mental Health:</strong> Frequent social media use can increase anxiety, depression, and stress due to constant comparison with others and exposure to negative content.</p>
+            <p class="article-highlight"><strong>Sleep Patterns:</strong> Late-night scrolling disrupts natural sleep cycles, leading to fatigue, reduced focus, and lowered academic or work performance.</p>
+            <p class="article-highlight"><strong>Physical Health:</strong> Extended screen time contributes to eye strain, headaches, and a sedentary lifestyle.</p>
+            <p class="article-highlight"><strong>Emotional and Social Impacts:</strong> Constant exposure to curated content may trigger FOMO (fear of missing out), loneliness, and dissatisfaction with real-life experiences.</p>
+            <p class="article-highlight"><strong>Conclusion:</strong> Social media is a double-edged sword. Responsible use, screen-time management, offline activities, and self-awareness are essential for maintaining well-being.</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills-section">
+        <h2>Skills & Expertise</h2>
+        <div class="cards">
+            <div class="card"><h3>Web Development</h3><p>Proficient in HTML, CSS, JavaScript, and responsive web design.</p></div>
+            <div class="card"><h3>Programming</h3><p>Experienced in Python, Java, and problem-solving with algorithms.</p></div>
+            <div class="card"><h3>Digital Design</h3><p>UI/UX design principles, prototyping, and user-centered design.</p></div>
         </div>
     </section>
 
@@ -211,4 +222,4 @@ function submitForm(e){
 }
 </script>
 </body>
-                                                                                    </html>
+</html>
