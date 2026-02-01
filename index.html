@@ -59,7 +59,7 @@ section h2::after {
 }
 section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
 
-/* Intro Section Professional Cards */
+/* Intro Section Cards */
 .intro-cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;}
 .intro-card {
     flex:1 1 280px;
@@ -72,10 +72,7 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
 .intro-card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12);}
 .intro-card h3 {color:#1b263b; margin-bottom:12px;}
 .intro-card p {color:#555;}
-
-/* Progress Bars */
-.progress-bar {background:#ddd; border-radius:8px; height:10px; margin-top:10px;}
-.progress {height:10px; border-radius:8px; background:#1b263b;}
+.intro-card a {color:#1b263b; font-weight:600; text-decoration:none;}
 
 /* Article Section */
 .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:12px; margin-bottom:20px;}
@@ -109,7 +106,7 @@ footer a {color:#f0f4f8; font-weight:600;}
 
 @media(max-width:1024px){
     #contact-panel {position:static; margin-top:40px; width:100%;}
-    .intro-cards, .cards {flex-direction:column; align-items:center;}
+    .intro-cards {flex-direction:column; align-items:center;}
 }
 </style>
 </head>
@@ -131,7 +128,6 @@ footer a {color:#f0f4f8; font-weight:600;}
     </div>
     <ul id="nav-links">
         <li><a href="#intro">Intro</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#article">Article</a></li>
     </ul>
 </nav>
@@ -144,20 +140,19 @@ footer a {color:#f0f4f8; font-weight:600;}
         <div class="intro-cards">
             <div class="intro-card">
                 <h3>About Me</h3>
-                <p>Hello! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus, passionate about technology, web development, and digital innovation.</p>
-            </div>
-            <div class="intro-card">
-                <h3>Studies & Achievements</h3>
-                <p>Currently studying Computer Science. Skilled in HTML, CSS, JavaScript, and Java. Completed multiple academic projects and research on technology and social media impact.</p>
+                <p>Hello! I am <strong>Kinza Shamraiz</strong>, passionate about technology, web development, and creating meaningful digital experiences. I aim to combine creativity and coding to produce professional digital solutions.</p>
             </div>
             <div class="intro-card">
                 <h3>Collaboration</h3>
-                <p>Open to collaborations and research projects related to web development, programming, and digital design. Always eager to contribute to innovative projects.</p>
+                <p>I welcome collaboration on web development projects, research work, and innovative digital solutions. Open to teamwork with like-minded professionals and students.</p>
             </div>
             <div class="intro-card">
-                <h3>Skills Overview</h3>
-                <p>HTML, CSS, JavaScript, Python, Java, UI/UX Design, Web Development.</p>
-                <div class="progress-bar"><div class="progress" style="width:90%;"></div></div>
+                <h3>Projects & Articles</h3>
+                <p>Featured works include research articles, web development projects, and digital design implementations. Explore my portfolio to see detailed projects and writings.</p>
+            </div>
+            <div class="intro-card">
+                <h3>Achievements</h3>
+                <p>Recognized for quality research, article publication, and hands-on project work in web technologies. Focused on delivering practical, impactful solutions in the digital domain.</p>
             </div>
             <div class="intro-card">
                 <h3>Featured Article</h3>
@@ -166,32 +161,10 @@ footer a {color:#f0f4f8; font-weight:600;}
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Building responsive and interactive websites using HTML, CSS, JavaScript.</p>
-                <div class="progress-bar"><div class="progress" style="width:90%;"></div></div>
-            </div>
-            <div class="card">
-                <h3>Programming</h3>
-                <p>Proficient in Python and Java, including algorithms and data structures.</p>
-                <div class="progress-bar"><div class="progress" style="width:75%;"></div></div>
-            </div>
-            <div class="card">
-                <h3>UI/UX Design</h3>
-                <p>Designing modern interfaces and prototypes using Figma and Adobe XD.</p>
-                <div class="progress-bar"><div class="progress" style="width:80%;"></div></div>
-            </div>
-        </div>
-    </section>
-
     <!-- Full Article Section -->
     <section id="article">
         <h2>Digital Influence: How Social Media Shapes Health</h2>
-        <div class="intro-box">
+        <div class="intro-card">
             <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
             <p>Social media platforms like Instagram, Facebook, TikTok, and Twitter are integral to modern life. They allow instant communication, entertainment, and access to vast information. Excessive use can negatively impact mental, emotional, and physical health.</p>
             <div class="article-highlight"><strong>Mental Health Effects:</strong> Anxiety, depression, and stress can result from constant comparison, cyberbullying, and social pressures online.</div>
@@ -220,4 +193,4 @@ footer a {color:#f0f4f8; font-weight:600;}
 function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
 </script>
 </body>
-                </html>
+</html>
