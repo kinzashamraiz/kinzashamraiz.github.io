@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kinza Shamraiz | Portfolio</title>
 <style>
+    /* Reset */
     * {margin:0; padding:0; box-sizing:border-box;}
     body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#eaeaea; color:#333;}
     a {text-decoration:none; color:inherit;}
@@ -19,7 +20,7 @@
     header h1 {font-size:2.8em; margin-bottom:10px;}
     header p {font-size:1.1em; color:#a8b0c0;}
 
-    /* Nav Bar */
+    /* Navbar */
     nav {
         display:flex;
         justify-content:space-between;
@@ -30,8 +31,6 @@
         top:0;
         z-index:100;
     }
-
-    /* Hamburger menu (left) */
     .menu-toggle {
         display:none;
         flex-direction:column;
@@ -43,24 +42,10 @@
         height:3px;
         background:white;
     }
-
-    nav .logo {
-        color:white;
-        font-weight:700;
-        font-size:1.2em;
-        margin-left:15px;
-    }
-
-    nav ul {
-        display:flex;
-        list-style:none;
-        gap:15px;
-    }
+    nav .logo {color:white; font-weight:700; font-size:1.2em; margin-left:15px;}
+    nav ul {display:flex; list-style:none; gap:15px;}
     nav ul li a {
-        color:white;
-        padding:8px 12px;
-        border-radius:6px;
-        transition:0.3s;
+        color:white; padding:8px 12px; border-radius:6px; transition:0.3s;
     }
     nav ul li a:hover {background:#0d1b2a;}
 
@@ -74,273 +59,24 @@
     /* Container & Sections */
     .container {max-width:1000px; margin:40px auto; padding:0 20px;}
     section {background:white; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); margin-bottom:40px;}
-    section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px;}
-    section p {font-size:1.1em; line-height:1.7; color:#555555; margin-bottom:15px;}
-    .article-highlight {background:#f0f4f8; padding:15px; border-left:4px solid #1b263b; border-radius:6px;}
-
-    /* Skills & Projects */
-    .cards {display:flex; flex-wrap:wrap; gap:20px;}
-    .card {flex:1 1 200px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    .card h3 {color:#1b263b; margin-bottom:10px;}
-    .card p {color:#555;}
-
-    /* Contact */
-    .contact-section form {display:flex; flex-direction:column; gap:15px;}
-    .contact-section input, .contact-section textarea {
-        padding:12px; border:1px solid #ccc; border-radius:8px; font-size:1em; width:100%;
-    }
-    .contact-section button {
-        padding:12px 25px; font-size:1em; color:white; background:#1b263b;
-        border:none; border-radius:8px; cursor:pointer; transition:0.3s;
-    }
-    .contact-section button:hover {background:#0d1b2a;}
-
-    .contact-section p.email-link {
-        margin-top:15px;
-        font-size:1em;
-        color:#0d1b2a;
-    }
-    .contact-section p.email-link a {
-        color:#1b263b;
-        font-weight:600;
-    }
-
-    /* Footer */
-    footer {background:#1b263b; color:white; text-align:center; padding:20px; border-top:3px solid #0d1b2a;}
-    footer a {color:#f0f4f8; font-weight:600;}
-
-    @media(max-width:768px){
-        .cards {flex-direction:column;}
-    }
-</style>
-</head>
-<body>
-
-<!-- Header -->
-<header>
-    <h1>Kinza Shamraiz</h1>
-    <p>Student at COMSATS University Islamabad, Abbottabad Campus</p>
-</header>
-
-<!-- Navigation -->
-<nav>
-    <div style="display:flex; align-items:center;">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="logo">Portfolio</div>
-    </div>
-    <ul id="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <!-- About / Intro Section -->
-    <section id="about">
-        <h2>Professional Introduction</h2>
-        <p>Welcome to my personal website! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
-        <p class="article-highlight">This website serves as my professional portfolio, highlighting my projects, skills, and academic journey. It also includes insights into topics I explore and articles I write.</p>
-        <p>Here you can explore my work, contact me for collaboration, or learn more about my studies and achievements.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="cards">
-            <div class="card"><h3>Web Development</h3><p>HTML, CSS, JavaScript, React basics.</p></div>
-            <div class="card"><h3>Programming</h3><p>Python, Java basics, data structures.</p></div>
-            <div class="card"><h3>Design</h3><p>UI/UX concepts, Figma, prototyping.</p></div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects & Articles</h2>
-        <div class="cards">
-            <div class="card"><h3>Social Media Impact</h3><p>Article on the effects of social media on health and productivity.</p></div>
-            <div class="card"><h3>Website Portfolio</h3><p>Personal website built using HTML, CSS, and JavaScript.</p></div>
-            <div class="card"><h3>Mini Projects</h3><p>Small coding projects demonstrating programming skills.</p></div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <form onsubmit="submitForm(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p class="email-link">Or email me directly at: 
-           <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
-        </p>
-    </section>
-</div>
-
-<!-- Footer -->
-<footer>
-    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus | 
-    Email: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
-</footer>
-
-<script>
-    // Toggle hamburger menu
-    function toggleMenu(){
-        document.getElementById('nav-links').classList.toggle('active');
-    }
-
-    // Contact form submission
-    function submitForm(event){
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        alert(`Thank you, ${name}! Your message has been sent.\nWe will contact you at ${email}.`);
-        event.target.reset();
-    }
-</script>
-
-</body>
-   </html>
-<!
-    nav ul li a {
-        color:white;
-        padding:8px 12px;
-        border-radius:6px;
-        transition:0.3s;
-    }
-    nav ul li a:hover {background:#0d1b2a;}
-
-    @media(max-width:768px){
-        nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:50px; left:0; padding:10px 0;}
-        nav ul.active {display:flex;}
-        .menu-toggle {display:flex;}
-        .logo {margin-left:10px;}
-    }
-
-    /* Container & Sections */
-    .container {max-width:900px; margin:40px auto; padding:0 20px;}
-    section {background:white; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); margin-bottom:40px;}
-    section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px;}
+    section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px; transition:0.3s;}
+    section h2:hover {color:#1b263b;}
     section h3 {font-size:1.4em; color:#1b263b; margin-bottom:10px;}
     section p {font-size:1.1em; line-height:1.7; color:#555555; margin-bottom:15px;}
     .article-highlight {background:#f0f4f8; padding:15px; border-left:4px solid #1b263b; border-radius:6px; margin-bottom:20px;}
-    .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-bottom:20px;}
-
-    /* Contact */
-    .contact-section {text-align:center;}
-    .contact-section p {font-size:1.1em;}
-    .contact-section a {color:#1b263b; font-weight:600;}
-
-    /* Footer */
-    footer {background:#1b263b; color:white; text-align:center; padding:20px; border-top:3px solid #0d1b2a;}
-    footer a {color:#f0f4f8; font-weight:600;}
-</style>
-</head>
-<body>
-
-<!-- Header -->
-<header>
-    <h1>Kinza Shamraiz</h1>
-    <p>Student at 
-<div class="container">
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kinza Shamraiz | Portfolio</title>
-<style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#eaeaea; color:#333;}
-    a {text-decoration:none; color:inherit;}
-
-    /* Header */
-    header {
-        background: #0d1b2a;
-        color: white;
-        padding: 50px 20px;
-        text-align: center;
-    }
-    header h1 {font-size:2.8em; margin-bottom:10px;}
-    header p {font-size:1.1em; color:#a8b0c0;}
-
-    /* Nav Bar */
-    nav {
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        background:#1b263b;
-        padding: 10px 20px;
-        position: sticky;
-        top:0;
-        z-index:100;
-    }
-
-    .menu-toggle {
-        display:none;
-        flex-direction:column;
-        cursor:pointer;
-        gap:4px;
-    }
-    .menu-toggle div {
-        width:25px;
-        height:3px;
-        background:white;
-    }
-
-    nav .logo {
-        color:white;
-        font-weight:700;
-        font-size:1.2em;
-        margin-left:15px;
-    }
-
-    nav ul {
-        display:flex;
-        list-style:none;
-        gap:15px;
-    }
-    nav ul li a {
-        color:white;
-        padding:8px 12px;
-        border-radius:6px;
-        transition:0.3s;
-    }
-    nav ul li a:hover {background:#0d1b2a;}
-
-    @media(max-width:768px){
-        nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:50px; left:0; padding:10px 0;}
-        nav ul.active {display:flex;}
-        .menu-toggle {display:flex;}
-        .logo {margin-left:10px;}
-    }
-
-    /* Container & Sections */
-    .container {max-width:1000px; margin:40px auto; padding:0 20px;}
-    section {background:white; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); margin-bottom:40px;}
-    section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px;}
-    section h3 {font-size:1.4em; color:#1b263b; margin-bottom:10px;}
-    section p {font-size:1.1em; line-height:1.7; color:#555555; margin-bottom:15px;}
-    .article-highlight {background:#f0f4f8; padding:15px; border-left:4px solid #1b263b; border-radius:6px; margin-bottom:20px;}
-    .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-bottom:20px;}
+    .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-bottom:20px; transition:transform 0.3s;}
+    .article-image:hover {transform:scale(1.05);}
 
     /* Cards */
     .cards {display:flex; flex-wrap:wrap; gap:20px;}
-    .card {flex:1 1 200px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    .card {flex:1 1 200px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.3s;}
+    .card:hover {transform:translateY(-5px);}
     .card h3 {color:#1b263b; margin-bottom:10px;}
     .card p {color:#555;}
 
     /* Contact */
     .contact-section {text-align:center;}
-    .contact-section p {font-size:1.1em;}
+    .contact-section p {font-size:1.1em; margin-bottom:10px;}
     .contact-section a {color:#1b263b; font-weight:600;}
 
     /* Footer */
@@ -350,6 +86,7 @@
     @media(max-width:768px){
         .cards {flex-direction:column;}
     }
+
 </style>
 </head>
 <body>
@@ -389,7 +126,7 @@
         </div>
     </section>
 
-    <!-- Article Section (middle portion) -->
+    <!-- Article Section -->
     <section id="article">
         <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
 
@@ -440,12 +177,10 @@
 </footer>
 
 <script>
+    // Hamburger toggle
     function toggleMenu(){
         document.getElementById('nav-links').classList.toggle('active');
     }
 </script>
 </body>
 </html>
-
-    
-    
