@@ -8,17 +8,16 @@
 /* Reset */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f4f6f8; color:#333;}
-a {text-decoration:none; color:inherit;}
 
 /* Header */
 header {
     background:#0d1b2a;
     color:white;
-    padding:60px 20px;
+    padding:50px 20px;
     text-align:center;
 }
 header h1 {font-size:3em; margin-bottom:10px;}
-header p {font-size:1.1em; color:#a8b0c0; font-style:italic;}
+header p {font-size:1.2em; color:#a8b0c0; font-style:italic;}
 
 /* Navigation */
 nav {
@@ -98,42 +97,28 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
     margin-bottom:15px;
 }
 
-/* Contact Section */
-.contact-section {
-    text-align:center;
-    padding:50px 20px;
+/* Floating Contact Panel */
+#contact-panel {
+    position:fixed;
+    top:100px;
+    right:20px;
+    width:280px;
     background:#e1e8f0;
+    padding:20px;
     border-radius:12px;
-    max-width:800px;
-    margin:0 auto 50px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    z-index:99;
 }
-.contact-section form {display:flex; flex-direction:column; gap:15px;}
-.contact-section input, .contact-section textarea {
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:1em;
-    width:100%;
-}
-.contact-section button {
-    padding:12px 25px;
-    font-size:1em;
-    color:white;
-    background:#1b263b;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
-}
-.contact-section button:hover {background:#0d1b2a;}
-.contact-section p.email-link {margin-top:15px; font-size:1em; color:#0d1b2a;}
-.contact-section p.email-link a {color:#1b263b; font-weight:600;}
+#contact-panel h2 {font-size:1.5em; margin-bottom:15px; text-align:center;}
+#contact-panel p, #contact-panel a {font-size:1em; color:#1b263b; display:block; text-align:center; margin-bottom:10px;}
+#contact-panel a {font-weight:600;}
 
 /* Footer */
 footer {background:#1b263b; color:white; text-align:center; padding:20px;}
 footer a {color:#f0f4f8; font-weight:600;}
 
-@media(max-width:768px){
+@media(max-width:1024px){
+    #contact-panel {position:static; margin-top:40px; width:100%;}
     .cards {flex-direction:column; align-items:center;}
 }
 </style>
@@ -143,7 +128,7 @@ footer a {color:#f0f4f8; font-weight:600;}
 <!-- Header -->
 <header>
     <h1>Kinza Shamraiz</h1>
-    <p>By Kinza Shamraiz | Student at COMSATS University Islamabad, Abbottabad Campus | Dated: 1 February 2026</p>
+    <p>Student at COMSATS University Islamabad, Abbottabad Campus</p>
 </header>
 
 <!-- Navigation -->
@@ -155,14 +140,23 @@ footer a {color:#f0f4f8; font-weight:600;}
         <div class="logo">Portfolio</div>
     </div>
     <ul id="nav-links">
+        <li><a href="#intro">Intro</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#intro">Introduction</a></li>
         <li><a href="#article">Article</a></li>
-        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 <div class="container">
+
+    <!-- Professional Intro -->
+    <section id="intro">
+        <h2>Professional Introduction</h2>
+        <div class="intro-box">
+            <p>Welcome! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
+            <p class="article-highlight">This portfolio highlights my projects, skills, and academic journey, along with insights into topics I explore and articles I write.</p>
+            <p>Explore my work, learn about my skills, and contact me for collaborations or opportunities.</p>
+        </div>
+    </section>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -170,7 +164,7 @@ footer a {color:#f0f4f8; font-weight:600;}
         <div class="cards">
             <div class="card">
                 <h3>Web Development</h3>
-                <p>Building responsive websites using HTML, CSS, and JavaScript.</p>
+                <p>Building responsive and interactive websites using HTML, CSS, JavaScript.</p>
                 <div class="progress-bar"><div class="progress" style="width:90%;"></div></div>
             </div>
             <div class="card">
@@ -183,16 +177,6 @@ footer a {color:#f0f4f8; font-weight:600;}
                 <p>Designing modern interfaces and prototypes using Figma and Adobe XD.</p>
                 <div class="progress-bar"><div class="progress" style="width:80%;"></div></div>
             </div>
-        </div>
-    </section>
-
-    <!-- Professional Intro -->
-    <section id="intro">
-        <h2>Professional Introduction</h2>
-        <div class="intro-box">
-            <p>Welcome to my personal website! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
-            <p class="article-highlight">This website serves as my professional portfolio, highlighting my projects, skills, and academic journey. It also includes insights into topics I explore and articles I write.</p>
-            <p>Explore my work, contact me for collaboration, or learn more about my studies and achievements.</p>
         </div>
     </section>
 
@@ -210,34 +194,23 @@ footer a {color:#f0f4f8; font-weight:600;}
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <form onsubmit="submitForm(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p class="email-link">Or email me directly at: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
-    </section>
+</div>
+
+<!-- Floating Contact Panel -->
+<div id="contact-panel">
+    <h2>Contact Me</h2>
+    <p>Email:</p>
+    <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
 </div>
 
 <!-- Footer -->
 <footer>
-    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus | 
-    Email: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
+    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
 </footer>
 
 <script>
 function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
-function submitForm(e){
-    e.preventDefault();
-    const name=document.getElementById('name').value;
-    const email=document.getElementById('email').value;
-    alert(`Thank you, ${name}! Your message has been sent.\nWe will contact you at ${email}.`);
-    e.target.reset();
-}
 </script>
+
 </body>
 </html>
