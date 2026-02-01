@@ -1,191 +1,195 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
-<h1>Welcome to My Website</h1>
-<p>My name is Kinza</p>
-
-<h2>About Me</h2>
-<p>
-I am learning web development using HTML, CSS and JavaScript.
-This is my personal portfolio website.
-</p>
-
-<h2>Skills</h2>
-<p>HTML</p>
-<p>CSS</p>
-<p>JavaScript</p>
-
-<h2>Contact</h2>
-<p>Email: kinzashamraiz4@gmail.com</p>
-
-<h2>JavaScript Demo</h2>
-<button onclick="welcome()">Click Me</button>
-
-<script>
-function welcome() {
-  alert("Welcome to Kinza's Website 🌸");
-}
-</script>
-
-<p>© 2026 Kinza | All Rights Reserved</
-<p
-  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Impact on Health - Kinza Shamraiz</title>
+    <title>Kinza Shamraiz | Personal Website</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
             color: #333;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
         header {
-            background-color: #3b7ddd;
+            background: linear-gradient(135deg, #6a9ee1, #3b7ddd);
             color: white;
-            padding: 25px 20px;
+            padding: 60px 20px;
             text-align: center;
+            border-bottom: 5px solid #2a5fb0;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.2em;
+            font-size: 2.8em;
+            margin-bottom: 10px;
         }
 
         header p {
-            margin: 5px 0 0;
-            font-size: 0.95em;
+            font-size: 1.1em;
+            color: #e0e0e0;
         }
 
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffffaa; /* Slight transparency */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            padding: 15px 25px;
+            margin: 5px;
+            color: #3b7ddd;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3b7ddd;
+            color: white;
+        }
+
+        /* Main Section */
         .container {
-            max-width: 900px;
-            margin: 30px auto;
+            max-width: 1000px;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
-        .article-image {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
         }
 
-        h2 {
+        .intro-text {
+            flex: 1 1 400px;
+        }
+
+        .intro-text h2 {
+            font-size: 2em;
             color: #3b7ddd;
-            margin-top: 30px;
-            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
-        h3 {
+        .intro-text p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 20px;
             color: #555;
-            margin-top: 20px;
         }
 
-        ul {
-            margin: 10px 0 20px 20px;
+        .intro-text button {
+            padding: 12px 25px;
+            font-size: 1em;
+            color: white;
+            background-color: #3b7ddd;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
-        p {
-            margin-bottom: 15px;
+        .intro-text button:hover {
+            background-color: #2a5fb0;
         }
 
-        footer {
+        .intro-image {
+            flex: 1 1 300px;
             text-align: center;
-            margin: 40px 0 20px;
-            color: #777;
-            font-size: 0.9em;
         }
 
-        /* Add a star symbol before headings */
-        h2::before {
-            content: "★ ";
-            color: #FFA500;
+        .intro-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
 
-        @media(max-width:600px){
-            header h1 {
-                font-size: 1.5em;
+        /* Footer */
+        footer {
+            background-color: #3b7ddd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-top: 3px solid #2a5fb0;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .intro-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .intro-image img {
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Social Media and Health: Balancing the Digital World</h1>
-        <p>By Kinza Shamraiz | Student at COMSATS University Islamabad, Abbottabad Campus | Dated: 1 February 2026</p>
+        <h1>Kinza Shamraiz</h1>
+        <p>Student at COMSATS University Islamabad, Abbottabad Campus</p>
     </header>
 
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container">
-        <h2>Introduction</h2>
-        <p>Social media has become an integral part of our daily lives. Platforms like Instagram, Facebook, TikTok, and Twitter connect people, provide entertainment, and share knowledge instantly. While it offers many advantages, excessive use can significantly impact mental, emotional, and physical health. Understanding this influence is essential, especially for students balancing academics and social life.</p>
-
-        <!-- Image added after introduction -->
-        <img src="images (15).jpeg" alt="Social Media and Health" class="article-image">
-
-        <h2>Mental Health Effects</h2>
-        <h3>Anxiety and Stress</h3>
-        <p>Constant notifications and the pressure to stay updated can increase stress levels. Seeing others’ achievements or lifestyles may also lead to comparison, triggering anxiety and low self-esteem.</p>
-
-        <h3>Sleep Disturbances</h3>
-        <p>Late-night scrolling disrupts sleep patterns by reducing melatonin production. Poor sleep can lead to fatigue, difficulty concentrating, and even lower academic performance.</p>
-
-        <h3>Addiction and Dependency</h3>
-        <p>Social media platforms are designed to be engaging. Excessive use can lead to dependency, making it difficult to focus on real-life tasks or spend time offline.</p>
-
-        <h2>Emotional and Social Impacts</h2>
-        <h3>Fear of Missing Out (FOMO)</h3>
-        <p>Viewing friends’ posts and activities can create FOMO, leading to feelings of loneliness or exclusion.</p>
-
-        <h3>Cyberbullying and Emotional Strain</h3>
-        <p>Online interactions sometimes include harassment or bullying, which can severely affect emotional wellbeing. Support systems and awareness are crucial to combat this.</p>
-
-        <h3>Reduced Face-to-Face Communication</h3>
-        <p>Spending too much time online may reduce real-life social skills and weaken interpersonal relationships.</p>
-
-        <h2>Physical Health Implications</h2>
-        <h3>Eye Strain and Headaches</h3>
-        <p>Prolonged screen time causes eye fatigue, dryness, and headaches. Regular breaks and screen filters can help reduce these effects.</p>
-
-        <h3>Sedentary Lifestyle</h3>
-        <p>Excessive use encourages inactivity, contributing to weight gain and related health problems. Incorporating physical activity into daily routines is important.</p>
-
-        <h3>Posture Problems</h3>
-        <p>Constant phone or laptop use can lead to poor posture, neck pain, and back issues. Ergonomic habits can help prevent these problems.</p>
-
-        <h2>Positive Impacts (If Used Wisely)</h2>
-        <ul>
-            <li><strong>Educational Resources:</strong> Access to online lectures, tutorials, and study groups.</li>
-            <li><strong>Health Awareness:</strong> Learning about fitness, mental health, and nutrition.</li>
-            <li><strong>Social Support:</strong> Staying connected with friends, family, and supportive communities.</li>
-        </ul>
-
-        <h2>Conclusion</h2>
-        <p>Social media is a double-edged sword. When used responsibly, it can educate, entertain, and connect people. However, overuse can affect mental, emotional, and physical health. Students and young adults should adopt healthy usage habits, including time management, regular breaks, and offline activities, to maintain overall wellbeing.</p>
+        <!-- Introduction Section -->
+        <section id="about" class="intro-section">
+            <div class="intro-text">
+                <h2>Welcome to My Personal Website</h2>
+                <p>Hello! I am Kinza Shamraiz, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and learning new things every day. This website is my personal space to showcase my journey, skills, and projects.</p>
+                <button onclick="showAlert()">Learn More</button>
+            </div>
+            <div class="intro-image">
+                <img src="images (15).jpeg" alt="Kinza Shamraiz">
+            </div>
+        </section>
     </div>
 
-    <footer>
+    <!-- Footer -->
+    <footer id="contact">
         &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Optional: dynamically display today's date if needed
-        const dateElement = document.querySelector('header p');
-        const today = new Date();
-        const formattedDate = today.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
-        // Uncomment next line to replace date automatically
-        // dateElement.textContent = "By Kinza Shamraiz | Student at COMSATS University Islamabad, Abbottabad Campus | Dated: " + formattedDate;
+        function showAlert() {
+            alert("Welcome to my website! Explore my skills, projects, and more.");
+        }
     </script>
 </body>
 </html>
