@@ -9,8 +9,9 @@
     <!-- Google verification meta tag -->
     <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g" />
 </head>
+    
 
-         <!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,17 +25,17 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5; /* Light grey background */
+            background-color: #fff; /* Pure white background like Google */
         }
         header {
-            background: #424242; /* Dark grey header */
-            color: white;
-            padding: 20px 0;
+            background: #f8f9fa; /* Light grey header like Google */
+            color: #333;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 1px solid #e0e0e0;
         }
         nav {
             max-width: 1200px;
@@ -46,8 +47,9 @@
         }
         nav h1 {
             margin: 0;
-            font-size: 1.8em;
-            color: #00bcd4; /* Unique teal accent */
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #1a73e8; /* Google blue accent */
         }
         nav ul {
             list-style: none;
@@ -56,49 +58,51 @@
             display: flex;
         }
         nav ul li {
-            margin-left: 30px;
+            margin-left: 20px;
         }
         nav ul li a {
-            color: white;
+            color: #333;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #00bcd4; /* Teal hover */
+            color: #1a73e8; /* Google blue hover */
         }
         main {
-            margin-top: 80px;
-            padding: 20px;
+            margin-top: 70px;
+            padding: 40px 20px;
         }
         section {
             max-width: 1200px;
-            margin: 0 auto 40px auto;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 0 auto 60px auto;
+            padding: 60px 20px;
+            background: #fff;
+            border-radius: 0; /* No radius for Google-like flat design */
         }
         #intro {
             text-align: center;
-            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%); /* Teal gradient */
-            color: white;
+            background: #fff;
+            color: #333;
             margin-top: 0;
         }
         #intro h2 {
             font-size: 2.5em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 300;
         }
         #intro p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto;
+            font-weight: 400;
         }
         #education {
             text-align: center;
         }
         #education h2 {
-            color: #00bcd4; /* Teal accent */
+            color: #1a73e8;
+            font-weight: 400;
         }
         #skills {
             display: flex;
@@ -106,40 +110,42 @@
             justify-content: center;
         }
         .skill {
-            background: #00bcd4; /* Teal background */
-            color: white;
+            background: #f1f3f4; /* Light grey like Google cards */
+            color: #333;
             padding: 20px;
             margin: 10px;
-            border-radius: 8px;
+            border-radius: 4px;
             text-align: center;
             width: 200px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            border: 1px solid #e0e0e0;
+            transition: box-shadow 0.3s;
         }
         .skill:hover {
-            transform: translateY(-5px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         #articles h2 {
             text-align: center;
-            color: #00bcd4;
+            color: #1a73e8;
+            font-weight: 400;
         }
         .article {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         .article h3 {
             color: #333;
+            font-weight: 400;
         }
         .article .meta {
             font-size: 0.9em;
             color: #666;
+            margin-bottom: 20px;
         }
         .article img {
             width: 100%;
             max-width: 600px;
-            margin: 20px auto;
+            margin: 30px auto;
             display: block;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 0;
         }
         #contact {
             text-align: center;
@@ -150,34 +156,36 @@
         }
         #contact input, #contact textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
-            border: 1px solid #ccc;
+            border: 1px solid #dadce0;
             border-radius: 4px;
             font-family: 'Roboto', sans-serif;
+            font-size: 1em;
         }
         #contact button {
-            background: #00bcd4; /* Teal button */
+            background: #1a73e8; /* Google blue */
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 1em;
             transition: background 0.3s;
         }
         #contact button:hover {
-            background: #0097a7;
+            background: #1557b0;
         }
         footer {
-            background: #424242; /* Dark grey footer */
-            color: white;
+            background: #f8f9fa;
+            color: #666;
             text-align: center;
             padding: 20px;
-            margin-top: 40px;
+            margin-top: 60px;
+            border-top: 1px solid #e0e0e0;
         }
         footer a {
-            color: #00bcd4;
+            color: #1a73e8;
             text-decoration: none;
         }
         footer a:hover {
@@ -192,7 +200,7 @@
             }
             nav ul li {
                 margin-left: 0;
-                margin-right: 20px;
+                margin-right: 15px;
             }
         }
     </style>
@@ -240,7 +248,6 @@
                 <img src="images (15).jpeg" alt="Social Media Positive Impact Illustration">
                 <p>In the digital age, social media has become an integral part of daily life, connecting billions worldwide. However, its influence extends far beyond communication, profoundly affecting both mental and physical health. While it fosters community and awareness, it also poses risks like anxiety, depression, and sedentary lifestyles. This article explores the multifaceted impact of social media on health, backed by research and real-world examples.</p>
                 <p>Social media can enhance mental well-being by providing support networks. Platforms like Instagram and Twitter allow users to share experiences, reducing isolation. Studies, such as those from the American Psychological Association, show that online communities help individuals with mental health issues feel less alone. Additionally, it promotes mindfulness through apps like Headspace, integrated into social feeds.</p>
-                <img src="images (17).jpeg" alt="Social Media Negative Effects Illustration">
                 <p>Conversely, excessive use leads to cyberbullying, FOMO (Fear Of Missing Out), and addiction. A 2023 Pew Research study found that 59% of teens report anxiety from social media. The constant comparison to curated lives exacerbates body image issues and low self-esteem, contributing to conditions like depression.</p>
                 <p>Physically, social media encourages sedentary behavior. Users spend hours scrolling, leading to obesity and poor posture. Research from the Journal of the American Medical Association links screen time to disrupted sleep patterns, affecting overall health. On the positive side, platforms disseminate health information, promoting fitness challenges and nutrition awareness.</p>
                 <p>To mitigate harms, experts recommend digital detoxes and mindful usage. Apps with built-in timers and parental controls can help. Education on digital literacy is crucial for fostering healthy interactions.</p>
@@ -284,4 +291,4 @@
         });
     </script>
 </body>
-    </html>                  
+</html>                            
