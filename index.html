@@ -209,12 +209,54 @@
 
 </body>
    </html>
-<!DOCTYPE html>
+<!
+    nav ul li a {
+        color:white;
+        padding:8px 12px;
+        border-radius:6px;
+        transition:0.3s;
+    }
+    nav ul li a:hover {background:#0d1b2a;}
+
+    @media(max-width:768px){
+        nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:50px; left:0; padding:10px 0;}
+        nav ul.active {display:flex;}
+        .menu-toggle {display:flex;}
+        .logo {margin-left:10px;}
+    }
+
+    /* Container & Sections */
+    .container {max-width:900px; margin:40px auto; padding:0 20px;}
+    section {background:white; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); margin-bottom:40px;}
+    section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px;}
+    section h3 {font-size:1.4em; color:#1b263b; margin-bottom:10px;}
+    section p {font-size:1.1em; line-height:1.7; color:#555555; margin-bottom:15px;}
+    .article-highlight {background:#f0f4f8; padding:15px; border-left:4px solid #1b263b; border-radius:6px; margin-bottom:20px;}
+    .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-bottom:20px;}
+
+    /* Contact */
+    .contact-section {text-align:center;}
+    .contact-section p {font-size:1.1em;}
+    .contact-section a {color:#1b263b; font-weight:600;}
+
+    /* Footer */
+    footer {background:#1b263b; color:white; text-align:center; padding:20px; border-top:3px solid #0d1b2a;}
+    footer a {color:#f0f4f8; font-weight:600;}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Kinza Shamraiz</h1>
+    <p>Student at 
+<div class="container">
+   <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kinza Shamraiz | Social Media Article</title>
+<title>Kinza Shamraiz | Portfolio</title>
 <style>
     * {margin:0; padding:0; box-sizing:border-box;}
     body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#eaeaea; color:#333;}
@@ -224,10 +266,10 @@
     header {
         background: #0d1b2a;
         color: white;
-        padding: 40px 20px;
+        padding: 50px 20px;
         text-align: center;
     }
-    header h1 {font-size:2.5em; margin-bottom:10px;}
+    header h1 {font-size:2.8em; margin-bottom:10px;}
     header p {font-size:1.1em; color:#a8b0c0;}
 
     /* Nav Bar */
@@ -242,7 +284,6 @@
         z-index:100;
     }
 
-    /* Hamburger menu (left) */
     .menu-toggle {
         display:none;
         flex-direction:column;
@@ -283,13 +324,19 @@
     }
 
     /* Container & Sections */
-    .container {max-width:900px; margin:40px auto; padding:0 20px;}
+    .container {max-width:1000px; margin:40px auto; padding:0 20px;}
     section {background:white; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); margin-bottom:40px;}
     section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px;}
     section h3 {font-size:1.4em; color:#1b263b; margin-bottom:10px;}
     section p {font-size:1.1em; line-height:1.7; color:#555555; margin-bottom:15px;}
     .article-highlight {background:#f0f4f8; padding:15px; border-left:4px solid #1b263b; border-radius:6px; margin-bottom:20px;}
     .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:10px; margin-bottom:20px;}
+
+    /* Cards */
+    .cards {display:flex; flex-wrap:wrap; gap:20px;}
+    .card {flex:1 1 200px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    .card h3 {color:#1b263b; margin-bottom:10px;}
+    .card p {color:#555;}
 
     /* Contact */
     .contact-section {text-align:center;}
@@ -299,6 +346,10 @@
     /* Footer */
     footer {background:#1b263b; color:white; text-align:center; padding:20px; border-top:3px solid #0d1b2a;}
     footer a {color:#f0f4f8; font-weight:600;}
+
+    @media(max-width:768px){
+        .cards {flex-direction:column;}
+    }
 </style>
 </head>
 <body>
@@ -320,6 +371,7 @@
         <div class="logo">Portfolio</div>
     </div>
     <ul id="nav-links">
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#article">Article</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -327,17 +379,24 @@
 
 <div class="container">
 
-    <!-- Article Section -->
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="cards">
+            <div class="card"><h3>Web Development</h3><p>HTML, CSS, JavaScript, React basics.</p></div>
+            <div class="card"><h3>Programming</h3><p>Python, Java basics, data structures.</p></div>
+            <div class="card"><h3>Design</h3><p>UI/UX concepts, Figma, prototyping.</p></div>
+        </div>
+    </section>
+
+    <!-- Article Section (middle portion) -->
     <section id="article">
-        <!-- Article Image -->
         <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
 
-        <!-- Article Introduction -->
         <h2>Introduction</h2>
         <p>Social media platforms like Instagram, Facebook, TikTok, and Twitter are now integral to daily life. They allow instant communication, entertainment, and access to information. However, recent studies have shown that excessive use can negatively affect mental, emotional, and physical health, especially among young adults and students.</p>
         <p class="article-highlight">Understanding these effects helps individuals use social media responsibly and maintain overall wellbeing.</p>
 
-        <!-- Mental Health -->
         <h2>Mental Health Effects</h2>
         <h3>Anxiety and Depression</h3>
         <p>Research indicates that frequent social media use can trigger anxiety and depression due to constant comparison with others, cyberbullying, and pressure to maintain an online image.</p>
@@ -346,7 +405,6 @@
         <h3>Addiction and Dependence</h3>
         <p>Social media platforms are designed to be engaging, often leading to excessive use and difficulty focusing on offline activities.</p>
 
-        <!-- Emotional & Social Impacts -->
         <h2>Emotional and Social Impacts</h2>
         <h3>Fear of Missing Out (FOMO)</h3>
         <p>Exposure to friends’ activities online can create FOMO, loneliness, and reduced satisfaction with real life.</p>
@@ -355,7 +413,6 @@
         <h3>Reduced Social Skills</h3>
         <p>Excessive online interaction may limit face-to-face communication skills and reduce the quality of personal relationships.</p>
 
-        <!-- Physical Health -->
         <h2>Physical Health Implications</h2>
         <h3>Eye Strain and Headaches</h3>
         <p>Prolonged screen time can cause eye fatigue, dryness, and headaches. Taking regular breaks and using screen filters can reduce strain.</p>
@@ -364,7 +421,6 @@
         <h3>Poor Posture</h3>
         <p>Constant use of smartphones and laptops often leads to neck and back problems. Practicing ergonomics can prevent long-term issues.</p>
 
-        <!-- Conclusion -->
         <h2>Conclusion</h2>
         <p>Social media is a double-edged sword. While it connects, informs, and entertains, overuse can negatively affect mental, emotional, and physical health. Students and young adults should use social media mindfully, manage screen time, take regular breaks, and engage in offline activities to maintain balance and wellbeing.</p>
     </section>
@@ -384,10 +440,12 @@
 </footer>
 
 <script>
-    // Toggle mobile menu
     function toggleMenu(){
         document.getElementById('nav-links').classList.toggle('active');
     }
 </script>
 </body>
 </html>
+
+    
+    
