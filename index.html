@@ -13,191 +13,149 @@
      <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kinza Shamraiz | Portfolio</title>
-<style>
-/* Reset */
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f4f6f8; color:#333;}
-a {text-decoration:none; color:inherit;}
-
-/* Header */
-header {
-    background:#0d1b2a;
-    color:white;
-    padding:40px 20px;
-    text-align:center;
-}
-header h1 {font-size:2em; margin-bottom:5px;}
-header p {font-size:0.9em; color:#a8b0c0; font-style:italic;}
-
-/* Navigation */
-nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#1b263b;
-    padding:10px 20px;
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-nav .logo {color:white; font-weight:700; font-size:1em;}
-nav ul {display:flex; list-style:none; gap:15px;}
-nav ul li a {color:white; padding:6px 10px; border-radius:6px; transition:0.3s;}
-nav ul li a:hover {background:#0d1b2a;}
-
-/* Hamburger menu for mobile */
-.menu-toggle {display:none; flex-direction:column; gap:4px; cursor:pointer;}
-.menu-toggle div {width:25px; height:3px; background:white;}
-@media(max-width:768px){
-    nav ul {display:none; flex-direction:column; background:#1b263b; width:100%; position:absolute; top:42px; left:0;}
-    nav ul.active {display:flex;}
-    .menu-toggle {display:flex;}
-}
-
-/* Sections */
-.container {max-width:1100px; margin:30px auto; padding:0 20px;}
-section {margin-bottom:50px;}
-section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px; text-align:center; position:relative;}
-section h2::after {
-    content:'';
-    width:60px;
-    height:3px;
-    background:#1b263b;
-    display:block;
-    margin:8px auto 0;
-    border-radius:3px;
-}
-section p {font-size:1em; line-height:1.7; color:#555; margin-bottom:15px;}
-
-/* Intro Box */
-.intro-box {
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.08);
-    max-width:900px;
-    margin:20px auto;
-}
-
-/* Article Section */
-.}
-.contact-section button:hover {background:#0d1b2a;}
-.contact-section p.email-link {margin-top:15px; font-size:1em; color:#0d1b2a;}
-.contact-section p.email-link a {color:#1b263b; font-weight:600;}
-
-/* Footer */
-footer {background:#1b263b; color:white; text-align:center; padding:20px;}
-footer a {color:#f0f4f8; font-weight:600;}
-
-@media(max-width:768px){
-    .skills-section .cards {flex-direction:column; align-items:center;}
-}
-</style>
-</head>
-<body>
-
-<!-- Header -->
-<header>
-    <h1>Kinza Shamraiz</h1>
-    <p>Student at COMSATS University Islamabad, Abbottabad Campus</p>
-</header>
-
-<!-- Navigation -->
-<nav>
-    <div style="display:flex; align-items:center;">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div></div><div></div><div></div>
-        </div>
-        <div class="logo">Menu</div>
-    </div>
-    <ul id="nav-links">
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#article">Article</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <!-- Professional Intro -->
-    <section id="intro">
-        <h2>Professional Introduction</h2>
-        <div class="intro-box">
-            <p>Hello! I am <strong>Kinza Shamraiz</strong>, a tech enthusiast and web developer passionate about building meaningful digital experiences.</p>
-            <p class="article-highlight">This portfolio showcases my professional projects, collaboration opportunities, research articles, and contributions to the digital domain.</p>
-            <p>Explore my work, read my articles, and reach out for collaboration opportunities.</p>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="skills-section">
-        <h2>Skills & Expertise</h2>
-        <div class="cards">
-            <div class="card"><h3>Web Development</h3><p>HTML, CSS, JavaScript, responsive design.</p></div>
-            <div class="card"><h3>Programming</h3><p>Python, Java, algorithms, and problem solving.</p></div>
-            <div class="card"><h3>Digital Design</h3><p>UI/UX design, prototyping, and user-centered design principles.</p></div>
-        </div>
-    </section>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Double-Edged Sword: Social Media's Profound Impact on Mental and Physical Health</title>
+    <title>Kinza Shamraiz - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
             color: #333;
+            background-color: #f9f9f9;
         }
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        header h1 {
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav h1 {
             margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 1.8em;
         }
-        .author-date {
-            margin-top: 10px;
-            font-size: 1.1em;
-            opacity: 0.9;
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ddd;
         }
         main {
-            max-width: 800px;
-            margin: 20px auto;
+            margin-top: 80px;
             padding: 20px;
+        }
+        section {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            padding: 40px 20px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        h2 {
-            color: #667eea;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
+        #intro {
+            text-align: center;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            margin-top: 0;
         }
-        p {
-            margin-bottom: 15px;
+        #intro h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        #intro p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #articles h2 {
+            text-align: center;
+            color: #667eea;
+        }
+        .article {
+            margin-bottom: 30px;
+        }
+        .article h3 {
+            color: #333;
+        }
+        .article .meta {
+            font-size: 0.9em;
+            color: #666;
+        }
+        #contact {
+            text-align: center;
+        }
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+        }
+        #contact button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        #contact button:hover {
+            background: #5a6fd8;
         }
         footer {
             background: #333;
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 20px;
-            font-size: 0.9em;
+            margin-top: 40px;
         }
         footer a {
             color: #667eea;
@@ -206,62 +164,96 @@ footer a {color:#f0f4f8; font-weight:600;}
         footer a:hover {
             text-decoration: underline;
         }
-        .interactive {
-            text-align: center;
-            margin: 20px 0;
-        }
-        button {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        button:hover {
-            background: #5a6fd8;
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 10px;
+            }
+            nav ul li {
+                margin-left: 0;
+                margin-right: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>The Double-Edged Sword: Social Media's Profound Impact on Mental and Physical Health</h1>
-        <div class="author-date">
-            By Kinza Shamraiz | Published on February 1, 2026
-        </div>
+        <nav>
+            <h1>Kinza Shamraiz</h1>
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>Introduction</h2>
-        <p>In the digital age, social media has become an integral part of daily life, connecting billions worldwide. However, its influence extends far beyond communication, profoundly affecting both mental and physical health. While it fosters community and awareness, it also poses risks like anxiety, depression, and sedentary lifestyles. This article explores the multifaceted impact of social media on health, backed by research and real-world examples.</p>
+        <section id="intro">
+            <h2>Hello! I am Kinza Shamraiz</h2>
+            <p>a tech enthusiast and web developer passionate about building meaningful digital experiences. This portfolio showcases my professional projects, collaboration opportunities, research articles, and contributions to the digital domain. Explore my work, read my articles, and reach out for collaboration opportunities.</p>
+        </section>
 
-        <h2>Positive Impacts on Mental Health</h2>
-        <p>Social media can enhance mental well-being by providing support networks. Platforms like Instagram and Twitter allow users to share experiences, reducing isolation. Studies, such as those from the American Psychological Association, show that online communities help individuals with mental health issues feel less alone. Additionally, it promotes mindfulness through apps like Headspace, integrated into social feeds.</p>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skill">Java</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Web Development</div>
+            <div class="skill">Articles & Blogging</div>
+            <div class="skill">HTML</div>
+            <div class="skill">JavaScript</div>
+        </section>
 
-        <h2>Negative Effects on Mental Health</h2>
-        <p>Conversely, excessive use leads to cyberbullying, FOMO (Fear Of Missing Out), and addiction. A 2023 Pew Research study found that 59% of teens report anxiety from social media. The constant comparison to curated lives exacerbates body image issues and low self-esteem, contributing to conditions like depression.</p>
+        <section id="articles">
+            <h2>Articles & Blog</h2>
+            <div class="article">
+                <h3>The Double-Edged Sword: Social Media's Profound Impact on Mental and Physical Health</h3>
+                <div class="meta">By Kinza Shamraiz | Published on February 1, 2026</div>
+                <p>In the digital age, social media has become an integral part of daily life, connecting billions worldwide. However, its influence extends far beyond communication, profoundly affecting both mental and physical health. While it fosters community and awareness, it also poses risks like anxiety, depression, and sedentary lifestyles. This article explores the multifaceted impact of social media on health, backed by research and real-world examples.</p>
+                <p>Social media can enhance mental well-being by providing support networks. Platforms like Instagram and Twitter allow users to share experiences, reducing isolation. Studies, such as those from the American Psychological Association, show that online communities help individuals with mental health issues feel less alone. Additionally, it promotes mindfulness through apps like Headspace, integrated into social feeds.</p>
+                <p>Conversely, excessive use leads to cyberbullying, FOMO (Fear Of Missing Out), and addiction. A 2023 Pew Research study found that 59% of teens report anxiety from social media. The constant comparison to curated lives exacerbates body image issues and low self-esteem, contributing to conditions like depression.</p>
+                <p>Physically, social media encourages sedentary behavior. Users spend hours scrolling, leading to obesity and poor posture. Research from the Journal of the American Medical Association links screen time to disrupted sleep patterns, affecting overall health. On the positive side, platforms disseminate health information, promoting fitness challenges and nutrition awareness.</p>
+                <p>To mitigate harms, experts recommend digital detoxes and mindful usage. Apps with built-in timers and parental controls can help. Education on digital literacy is crucial for fostering healthy interactions.</p>
+            </div>
+        </section>
 
-        <h2>Physical Health Implications</h2>
-        <p>Physically, social media encourages sedentary behavior. Users spend hours scrolling, leading to obesity and poor posture. Research from the Journal of the American Medical Association links screen time to disrupted sleep patterns, affecting overall health. On the positive side, platforms disseminate health information, promoting fitness challenges and nutrition awareness.</p>
-
-        <h2>Balancing the Scales</h2>
-        <p>To mitigate harms, experts recommend digital detoxes and mindful usage. Apps with built-in timers and parental controls can help. Education on digital literacy is crucial for fostering healthy interactions.</p>
-
-        <div class="interactive">
-            <button onclick="alert('Thanks for reading! Share this article to spread awareness.')">Share This Article</button>
-        </div>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Reach out for collaboration opportunities or inquiries.</p>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p>Email: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Kinza Shamraiz. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        <p>&copy; 2026 Kinza Shamraiz. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
     <script>
-        // Simple JavaScript for interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Article loaded successfully.');
-            // Could add more JS here, e.g., analytics or dynamic content
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
         });
     </script>
 </body>
@@ -276,33 +268,4 @@ footer a {color:#f0f4f8; font-weight:600;}
 
     
 
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <form onsubmit="submitForm(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p class="email-link">Or email me directly at: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
-    </section>
-</div>
-
-<!-- Footer -->
-<footer>
-    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
-</footer>
-
-<script>
-function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
-function submitForm(e){
-    e.preventDefault();
-    const name=document.getElementById('name').value;
-    const email=document.getElementById('email').value;
-    alert(`Thank you, ${name}! Your message has been sent.\nWe will contact you at ${email}.`);
-    e.target.reset();
-}
-</script>
-</body>
-</html>           
+    
