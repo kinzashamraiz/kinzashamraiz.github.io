@@ -43,8 +43,8 @@
         transition:0.3s;
     }
     nav ul li a:hover {background:#0d1b2a;}
-    
-    /* 3-dot menu for mobile */
+
+    /* Hamburger menu (right side) */
     .menu-toggle {
         display:none;
         flex-direction:column;
@@ -64,7 +64,6 @@
 
     /* Container & Sections */
     .container {max-width:1000px; margin:40px auto; padding:0 20px;}
-
     section {background:white; padding:30px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.1); margin-bottom:40px;}
     section h2 {font-size:2em; color:#0d1b2a; margin-bottom:20px;}
     section p {font-size:1.1em; line-height:1.7; color:#555555; margin-bottom:15px;}
@@ -106,17 +105,17 @@
 <!-- Navigation -->
 <nav>
     <div class="logo">Portfolio</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <ul id="nav-links">
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </nav>
 
 <div class="container">
@@ -166,7 +165,7 @@
 </footer>
 
 <script>
-    // Menu toggle
+    // Toggle hamburger menu
     function toggleMenu(){
         document.getElementById('nav-links').classList.toggle('active');
     }
@@ -181,5 +180,6 @@
         event.target.reset();
     }
 </script>
+
 </body>
 </html>
