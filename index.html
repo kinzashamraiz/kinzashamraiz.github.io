@@ -35,7 +35,7 @@ nav ul {display:flex; list-style:none; gap:15px;}
 nav ul li a {color:white; padding:8px 12px; border-radius:6px; transition:0.3s;}
 nav ul li a:hover {background:#0d1b2a;}
 
-/* Hamburger menu for mobile */
+/* Hamburger menu */
 .menu-toggle {display:none; flex-direction:column; gap:4px; cursor:pointer;}
 .menu-toggle div {width:25px; height:3px; background:white;}
 @media(max-width:768px){
@@ -86,6 +86,7 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
     max-width:900px;
     margin:20px auto;
 }
+.intro-box a {color:#1b263b; font-weight:600;}
 
 /* Article Section */
 .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:12px; margin-bottom:20px;}
@@ -100,7 +101,7 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
 /* Floating Contact Panel */
 #contact-panel {
     position:fixed;
-    top:100px;
+    top:120px;
     right:20px;
     width:280px;
     background:#e1e8f0;
@@ -148,13 +149,13 @@ footer a {color:#f0f4f8; font-weight:600;}
 
 <div class="container">
 
-    <!-- Professional Intro -->
+    <!-- Professional Intro + Article Preview -->
     <section id="intro">
         <h2>Professional Introduction</h2>
         <div class="intro-box">
-            <p>Welcome! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
-            <p class="article-highlight">This portfolio highlights my projects, skills, and academic journey, along with insights into topics I explore and articles I write.</p>
-            <p>Explore my work, learn about my skills, and contact me for collaborations or opportunities.</p>
+            <p>Hello! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
+            <p class="article-highlight">Featured Article Preview: <a href="#article">"Digital Influence: How Social Media Shapes Health"</a></p>
+            <p>This portfolio highlights my skills, projects, and professional journey. Explore my work and learn more about my research and articles.</p>
         </div>
     </section>
 
@@ -180,7 +181,7 @@ footer a {color:#f0f4f8; font-weight:600;}
         </div>
     </section>
 
-    <!-- Article Section -->
+    <!-- Full Article Section -->
     <section id="article">
         <h2>Digital Influence: How Social Media Shapes Health</h2>
         <div class="intro-box">
@@ -211,6 +212,5 @@ footer a {color:#f0f4f8; font-weight:600;}
 <script>
 function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
 </script>
-
 </body>
-</html>
+    </html>
