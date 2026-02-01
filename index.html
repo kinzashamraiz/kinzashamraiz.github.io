@@ -8,16 +8,17 @@
 /* Reset */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f4f6f8; color:#333;}
+a {text-decoration:none; color:inherit;}
 
 /* Header */
 header {
     background:#0d1b2a;
     color:white;
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 header h1 {font-size:3em; margin-bottom:10px;}
-header p {font-size:1.2em; color:#a8b0c0; font-style:italic;}
+header p {font-size:1.1em; color:#a8b0c0; font-style:italic;}
 
 /* Navigation */
 nav {
@@ -35,7 +36,7 @@ nav ul {display:flex; list-style:none; gap:15px;}
 nav ul li a {color:white; padding:8px 12px; border-radius:6px; transition:0.3s;}
 nav ul li a:hover {background:#0d1b2a;}
 
-/* Hamburger menu */
+/* Hamburger menu for mobile */
 .menu-toggle {display:none; flex-direction:column; gap:4px; cursor:pointer;}
 .menu-toggle div {width:25px; height:3px; background:white;}
 @media(max-width:768px){
@@ -59,20 +60,29 @@ section h2::after {
 }
 section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
 
-/* Intro Section Cards */
-.intro-cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;}
-.intro-card {
-    flex:1 1 280px;
+/* Cards */
+.cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;}
+.card {
     background:white;
-    border-radius:12px;
+    flex:1 1 280px;
     padding:25px;
+    border-radius:12px;
     box-shadow:0 6px 20px rgba(0,0,0,0.08);
     transition:transform 0.3s, box-shadow 0.3s;
 }
-.intro-card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12);}
-.intro-card h3 {color:#1b263b; margin-bottom:12px;}
-.intro-card p {color:#555;}
-.intro-card a {color:#1b263b; font-weight:600; text-decoration:none;}
+.card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12);}
+.card h3 {color:#1b263b; margin-bottom:12px;}
+.card p {color:#555;}
+
+/* Intro Section */
+.intro-box {
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    max-width:900px;
+    margin:20px auto;
+}
 
 /* Article Section */
 .article-image {width:100%; max-height:400px; object-fit:cover; border-radius:12px; margin-bottom:20px;}
@@ -84,29 +94,43 @@ section p {font-size:1.1em; line-height:1.7; color:#555; margin-bottom:15px;}
     margin-bottom:15px;
 }
 
-/* Floating Contact Panel */
-#contact-panel {
-    position:fixed;
-    top:120px;
-    right:20px;
-    width:280px;
+/* Contact Section */
+.contact-section {
+    text-align:center;
+    padding:50px 20px;
     background:#e1e8f0;
-    padding:20px;
     border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.1);
-    z-index:99;
+    max-width:800px;
+    margin:0 auto 50px;
 }
-#contact-panel h2 {font-size:1.5em; margin-bottom:15px; text-align:center;}
-#contact-panel p, #contact-panel a {font-size:1em; color:#1b263b; display:block; text-align:center; margin-bottom:10px;}
-#contact-panel a {font-weight:600;}
+.contact-section form {display:flex; flex-direction:column; gap:15px;}
+.contact-section input, .contact-section textarea {
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:1em;
+    width:100%;
+}
+.contact-section button {
+    padding:12px 25px;
+    font-size:1em;
+    color:white;
+    background:#1b263b;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.contact-section button:hover {background:#0d1b2a;}
+.contact-section p.email-link {margin-top:15px; font-size:1em; color:#0d1b2a;}
+.contact-section p.email-link a {color:#1b263b; font-weight:600;}
 
 /* Footer */
 footer {background:#1b263b; color:white; text-align:center; padding:20px;}
 footer a {color:#f0f4f8; font-weight:600;}
 
-@media(max-width:1024px){
-    #contact-panel {position:static; margin-top:40px; width:100%;}
-    .intro-cards {flex-direction:column; align-items:center;}
+@media(max-width:768px){
+    .cards {flex-direction:column; align-items:center;}
 }
 </style>
 </head>
@@ -115,7 +139,7 @@ footer a {color:#f0f4f8; font-weight:600;}
 <!-- Header -->
 <header>
     <h1>Kinza Shamraiz</h1>
-    <p>Student at COMSATS University Islamabad, Abbottabad Campus</p>
+    <p>By Kinza Shamraiz | Student at COMSATS University Islamabad, Abbottabad Campus | Dated: 1 February 2026</p>
 </header>
 
 <!-- Navigation -->
@@ -127,70 +151,76 @@ footer a {color:#f0f4f8; font-weight:600;}
         <div class="logo">Portfolio</div>
     </div>
     <ul id="nav-links">
-        <li><a href="#intro">Intro</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#intro">Introduction</a></li>
         <li><a href="#article">Article</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 <div class="container">
-
-    <!-- Professional Intro Section -->
-    <section id="intro">
-        <h2>Professional Introduction</h2>
-        <div class="intro-cards">
-            <div class="intro-card">
-                <h3>About Me</h3>
-                <p>Hello! I am <strong>Kinza Shamraiz</strong>, passionate about technology, web development, and creating meaningful digital experiences. I aim to combine creativity and coding to produce professional digital solutions.</p>
-            </div>
-            <div class="intro-card">
-                <h3>Collaboration</h3>
-                <p>I welcome collaboration on web development projects, research work, and innovative digital solutions. Open to teamwork with like-minded professionals and students.</p>
-            </div>
-            <div class="intro-card">
-                <h3>Projects & Articles</h3>
-                <p>Featured works include research articles, web development projects, and digital design implementations. Explore my portfolio to see detailed projects and writings.</p>
-            </div>
-            <div class="intro-card">
-                <h3>Achievements</h3>
-                <p>Recognized for quality research, article publication, and hands-on project work in web technologies. Focused on delivering practical, impactful solutions in the digital domain.</p>
-            </div>
-            <div class="intro-card">
-                <h3>Featured Article</h3>
-                <p>Preview: <a href="#article">"Digital Influence: How Social Media Shapes Health"</a></p>
-            </div>
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="cards">
+            <div class="card"><h3>Web Development</h3><p>HTML, CSS, JavaScript, React basics.</p></div>
+            <div class="card"><h3>Programming</h3><p>Python, Java basics, data structures.</p></div>
+            <div class="card"><h3>Design</h3><p>UI/UX concepts, Figma, prototyping.</p></div>
         </div>
     </section>
 
-    <!-- Full Article Section -->
+    <!-- Professional Intro -->
+    <section id="intro">
+        <h2>Professional Introduction</h2>
+        <div class="intro-box">
+            <p>Welcome to my personal website! I am <strong>Kinza Shamraiz</strong>, a student at COMSATS University Islamabad, Abbottabad Campus. I am passionate about technology, web development, and creating meaningful digital experiences.</p>
+            <p class="article-highlight">This website serves as my professional portfolio, highlighting my projects, skills, and academic journey. It also includes insights into topics I explore and articles I write.</p>
+            <p>Here you can explore my work, contact me for collaboration, or learn more about my studies and achievements.</p>
+        </div>
+    </section>
+
+    <!-- Article -->
     <section id="article">
-        <h2>Digital Influence: How Social Media Shapes Health</h2>
-        <div class="intro-card">
+        <h2>Social Media Impact on Health</h2>
+        <div class="intro-box">
             <img src="images (15).jpeg" alt="Social Media Impact" class="article-image">
             <p>Social media platforms like Instagram, Facebook, TikTok, and Twitter are integral to modern life. They allow instant communication, entertainment, and access to vast information. Excessive use can negatively impact mental, emotional, and physical health.</p>
-            <div class="article-highlight"><strong>Mental Health Effects:</strong> Anxiety, depression, and stress can result from constant comparison, cyberbullying, and social pressures online.</div>
-            <div class="article-highlight"><strong>Sleep Disturbances:</strong> Late-night scrolling disrupts natural sleep cycles, causing fatigue and reduced academic performance.</div>
-            <div class="article-highlight"><strong>Physical Health:</strong> Prolonged screen time can cause eye strain, headaches, and sedentary lifestyle risks.</div>
+            <div class="article-highlight"><strong>Mental Health Effects:</strong> Frequent social media use can trigger anxiety, depression, and stress due to constant comparison and cyberbullying.</div>
+            <div class="article-highlight"><strong>Sleep Disturbances:</strong> Late-night scrolling disrupts sleep cycles, causing fatigue and lower academic performance.</div>
+            <div class="article-highlight"><strong>Physical Health Implications:</strong> Prolonged screen time causes eye strain, headaches, and sedentary lifestyle risks.</div>
             <div class="article-highlight"><strong>Emotional & Social Impacts:</strong> Exposure to curated content may create FOMO, loneliness, and reduce satisfaction with real-life experiences.</div>
             <div class="article-highlight"><strong>Conclusion:</strong> Social media is a double-edged sword. Responsible usage, balanced screen time, offline activities, and awareness are key to maintaining health.</div>
         </div>
     </section>
 
-</div>
-
-<!-- Floating Contact Panel -->
-<div id="contact-panel">
-    <h2>Contact Me</h2>
-    <p>Email:</p>
-    <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p class="email-link">Or email me directly at: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a></p>
+    </section>
 </div>
 
 <!-- Footer -->
 <footer>
-    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus
+    &copy; 2026 Kinza Shamraiz | COMSATS University Islamabad, Abbottabad Campus | 
+    Email: <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
 </footer>
 
 <script>
 function toggleMenu(){ document.getElementById('nav-links').classList.toggle('active'); }
+function submitForm(e){
+    e.preventDefault();
+    const name=document.getElementById('name').value;
+    const email=document.getElementById('email').value;
+    alert(`Thank you, ${name}! Your message has been sent.\nWe will contact you at ${email}.`);
+    e.target.reset();
+}
 </script>
 </body>
 </html>
