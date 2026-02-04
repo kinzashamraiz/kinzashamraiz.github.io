@@ -15,26 +15,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexGen Digital | Future of Marketing</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Lumina | Modern Blog & Insights</title>
     <style>
         /* --- CSS Variables & Reset --- */
         :root {
-            --primary: #4f46e5; /* Indigo */
-            --primary-dark: #3730a3;
-            --accent: #ec4899; /* Pink */
-            --dark-bg: #0f172a;
-            --card-bg: #1e293b;
-            --text-light: #f8fafc;
-            --text-gray: #94a3b8;
-            --gradient: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
-            --transition: all 0.3s ease;
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #475569;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --container-width: 1200px;
+            --radius: 12px;
         }
 
         * {
@@ -43,26 +40,17 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            color: #fff;
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.2s ease;
         }
 
         ul {
@@ -72,89 +60,41 @@
         img {
             max-width: 100%;
             display: block;
+            object-fit: cover;
         }
 
-        /* --- Utilities --- */
+        /* --- Layout Utility --- */
         .container {
-            max-width: 1200px;
+            max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .gradient-text {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: white;
-            margin-left: 10px;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        /* --- Header / Nav --- */
+        /* --- Header & Navigation --- */
         header {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
             top: 0;
-            width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        nav {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 70px;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
         }
 
         .logo span {
-            color: var(--primary);
+            color: var(--primary-color);
         }
 
         .nav-links {
@@ -164,15 +104,30 @@
 
         .nav-links a {
             font-weight: 500;
-            transition: var(--transition);
-            position: relative;
+            color: var(--secondary-color);
+            font-size: 0.95rem;
         }
 
-        .nav-links a:hover {
-            color: var(--accent);
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
         }
 
-        .mobile-menu-btn {
+        .btn-subscribe {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-subscribe:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
@@ -180,615 +135,583 @@
 
         /* --- Hero Section --- */
         .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), 
-                        url('https://picsum.photos/seed/techdigital/1920/1080') no-repeat center center/cover;
-            padding-top: 80px;
+            padding: 60px 0;
+        }
+
+        .hero-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 400px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
         }
 
         .hero-content {
-            text-align: center;
-            max-width: 800px;
-            animation: fadeIn 1s ease-out;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-gray);
-            margin-bottom: 40px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* --- Trending Topics (Best Topic Section) --- */
-        .trending {
-            background-color: #162032;
-        }
-
-        .section-header {
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .section-header p {
-            color: var(--text-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .card p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        .trending-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(236, 72, 153, 0.2);
-            color: var(--accent);
-            padding: 5px 12px;
-            border-radius: 20px;
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
+            margin-bottom: 16px;
+            width: fit-content;
         }
 
-        /* --- Portfolio / Visuals --- */
-        .visuals {
-            position: relative;
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
-        
-        .visual-grid {
+
+        .hero-excerpt {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .author-info small {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- Main Content Grid --- */
+        .content-wrapper {
+            padding: 40px 0 80px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: 2fr 1fr; /* Blog posts : Sidebar */
+            gap: 40px;
         }
 
-        .visual-item {
-            position: relative;
-            border-radius: 15px;
+        /* --- Blog Feed --- */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .post-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
             overflow: hidden;
-            height: 300px;
-        }
-
-        .visual-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .visual-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-        }
-
-        /* --- Services --- */
-        .services-list {
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
-            gap: 20px;
         }
 
-        .service-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--card-bg);
-            padding: 20px 30px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            transition: var(--transition);
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
         }
 
-        .service-row:hover {
-            background: #27354f;
-            padding-left: 40px;
+        .post-img-wrapper {
+            height: 200px;
+            overflow: hidden;
         }
 
-        .service-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .service-info p {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-        }
-
-        .service-icon {
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-
-        /* --- Contact Section --- */
-        .contact {
-            background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)),
-                        url('https://picsum.photos/seed/officebg/1920/600') center/cover fixed;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .email-box {
-            background: rgba(255,255,255,0.05);
-            padding: 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .email-box i {
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
-
-        .email-box a {
-            font-size: 1.1rem;
-            font-weight: 600;
-            word-break: break-all;
-        }
-
-        .email-box a:hover {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-
-        .contact-form {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: var(--text-gray);
-        }
-
-        .form-control {
+        .post-img-wrapper img {
             width: 100%;
-            padding: 12px 15px;
-            background: var(--dark-bg);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            color: #fff;
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover .post-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .post-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .post-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .post-footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* --- Sidebar --- */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--secondary-color);
+            padding: 4px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .count {
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 10px;
             font-family: inherit;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
+        .newsletter-form button {
+            width: 100%;
+            background: var(--text-main);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: black;
         }
 
         /* --- Footer --- */
         footer {
-            background: #0b1120;
-            padding: 50px 0 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 20px;
         }
 
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
+        .footer-brand h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-col h4 {
+            color: white;
             margin-bottom: 20px;
-            color: #fff;
+            font-size: 1rem;
         }
 
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
+        .footer-col ul li {
+            margin-bottom: 10px;
         }
 
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
+        .footer-col a:hover {
             color: white;
         }
 
         .copyright {
-            color: var(--text-gray);
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
             font-size: 0.9rem;
         }
 
         /* --- Responsive Design --- */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 2.8rem; }
-            .contact-container { grid-template-columns: 1fr; }
+        @media (max-width: 900px) {
+            .hero-card {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            .hero-image {
+                height: 250px;
+            }
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                order: 2; /* Move sidebar below content on mobile */
+            }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .nav-links, .btn-subscribe {
+                display: none; /* In a real app, we'd add JS to toggle this */
+            }
+            .menu-toggle {
+                display: block;
+            }
+            /* Mobile Menu Logic (Pure CSS via Checkbox hack or simple JS) */
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
                 position: absolute;
-                top: 80px;
+                top: 70px;
                 left: 0;
                 width: 100%;
-                background: var(--card-bg);
-                flex-direction: column;
+                background: white;
                 padding: 20px;
+                box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+                border-bottom: 1px solid var(--border-color);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
-            
-            .nav-links.active { display: flex; }
-            .mobile-menu-btn { display: block; }
-            
-            .hero h1 { font-size: 2.2rem; }
-            .grid-3 { grid-template-columns: 1fr; }
-            .visual-grid { grid-template-columns: 1fr; }
-            
-            .btn { width: 100%; margin: 10px 0 0 0; }
-            .btn-outline { margin-left: 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">NexGen<span>Digital</span></div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#trends">Trending</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="mobile-menu-btn" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+        <div class="container nav-container">
+            <a href="#" class="logo">Lumina<span>.</span></a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#" class="active">Home</a>
+                <a href="#">Technology</a>
+                <a href="#">Design</a>
+                <a href="#">Lifestyle</a>
+                <a href="#">About</a>
             </nav>
+
+            <a href="#newsletter" class="btn-subscribe">Subscribe</a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Scale Your Brand with <span class="gradient-text">Next-Level</span> Digital Marketing</h1>
-            <p>We leverage AI, data analytics, and creative storytelling to drive growth for your business in the modern era.</p>
-            <div class="cta-group">
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-                <a href="#trends" class="btn btn-outline">View Trends</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trending Topics Section -->
-    <section id="trends" class="section-padding trending">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Trending <span class="gradient-text">Now</span></h2>
-                <p>Stay ahead of the curve. These are the cutting-edge strategies dominating the digital landscape in 2024.</p>
-            </div>
-
-            <div class="grid-3">
-                <!-- Topic 1: AI -->
-                <article class="card">
-                    <div class="trending-badge">Hot</div>
-                    <i class="fa-solid fa-robot card-icon"></i>
-                    <h3>AI-Driven Automation</h3>
-                    <p>Utilizing generative AI for content creation, chatbots, and predictive analytics to personalize user experiences like never before.</p>
-                    <a href="#contact" style="color: var(--accent); font-weight: 600;">Learn more &rarr;</a>
-                </article>
-
-                <!-- Topic 2: Short Video -->
-                <article class="card">
-                    <div class="trending-badge">Viral</div>
-                    <i class="fa-solid fa-video card-icon"></i>
-                    <h3>Short-Form Video</h3>
-                    <p>Dominate TikTok and Instagram Reels. We create bite-sized, high-retention video content that converts viewers into customers.</p>
-                    <a href="#contact" style="color: var(--accent); font-weight: 600;">Learn more &rarr;</a>
-                </article>
-
-                <!-- Topic 3: Influencer -->
-                <article class="card">
-                    <div class="trending-badge">Trust</div>
-                    <i class="fa-solid fa-users-viewfinder card-icon"></i>
-                    <h3>Micro-Influencers</h3>
-                    <p>Shift away from celebs. Partnering with niche micro-influencers to build authentic communities and higher engagement rates.</p>
-                    <a href="#contact" style="color: var(--accent); font-weight: 600;">Learn more &rarr;</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <article class="hero-card">
+                    <img src="https://picsum.photos/seed/techhero/800/600" alt="Featured Post" class="hero-image">
+                    <div class="hero-content">
+                        <span class="tag">Featured</span>
+                        <h1 class="hero-title">The Future of Artificial Intelligence in Creative Industries</h1>
+                        <p class="hero-excerpt">How AI tools are reshaping the way we design, write, and create art. Is human creativity at risk, or is it evolving into something new?</p>
+                        <div class="author-meta">
+                            <img src="https://picsum.photos/seed/user1/100/100" alt="Author" class="author-avatar">
+                            <div class="author-info">
+                                <span>Sarah Jenkins</span>
+                                <small>Oct 24, 2023 · 6 min read</small>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Visual Showcase -->
-    <section class="section-padding visuals">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Our Creative <span class="gradient-text">Work</span></h2>
-            </div>
-            <div class="visual-grid">
-                <div class="visual-item">
-                    <img src="https://picsum.photos/seed/meeting/800/600" alt="Team meeting">
-                    <div class="overlay">
-                        <h4>Strategy Sessions</h4>
-                    </div>
-                </div>
-                <div class="visual-item">
-                    <img src="https://picsum.photos/seed/analytics/800/600" alt="Data analytics">
-                    <div class="overlay">
-                        <h4>Data-Driven Results</h4>
-                    </div>
-                </div>
-                <div class="visual-item">
-                    <img src="https://picsum.photos/seed/camera/800/600" alt="Content creation">
-                    <div class="overlay">
-                        <h4>Content Production</h4>
-                    </div>
-                </div>
-                <div class="visual-item">
-                    <img src="https://picsum.photos/seed/laptopcode/800/600" alt="SEO optimization">
-                    <div class="overlay">
-                        <h4>Technical SEO</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section-padding">
-        <div class="container">
-            <div class="contact-container">
-                <div>
-                    <h2>Full-Service <span class="gradient-text">Solutions</span></h2>
-                    <p style="color:var(--text-gray); margin-bottom: 30px;">From concept to conversion, we handle every aspect of your digital presence.</p>
-                    
-                    <div class="services-list">
-                        <div class="service-row">
-                            <div class="service-info">
-                                <h3>Search Engine Optimization (SEO)</h3>
-                                <p>Rank higher on Google with our technical and content strategies.</p>
+        <!-- Main Layout -->
+        <div class="container content-wrapper">
+            
+            <!-- Latest Posts -->
+            <section class="posts-feed">
+                <h2 class="section-title">Latest Articles</h2>
+                
+                <div class="posts-grid">
+                    <!-- Post 1 -->
+                    <article class="post-card">
+                        <div class="post-img-wrapper">
+                            <img src="https://picsum.photos/seed/des1/600/400" alt="Minimalism Design">
+                        </div>
+                        <div class="post-body">
+                            <span class="tag" style="background:#fce7f3; color:#db2777;">Design</span>
+                            <h3 class="post-title"><a href="#">Embracing Minimalism in 2024 Web Design</a></h3>
+                            <p class="post-excerpt">Why less is more when it comes to user interface and user experience.</p>
+                            <div class="post-footer">
+                                <span>Alex Morgan</span>
+                                <time>Oct 22</time>
                             </div>
-                            <i class="fa-solid fa-magnifying-glass service-icon"></i>
                         </div>
-                        
-                        <div class="service-row">
-                            <div class="service-info">
-                                <h3>Social Media Management</h3>
-                                <p>Engaging posts, community management, and growth hacking.</p>
-                            </div>
-                            <i class="fa-brands fa-instagram service-icon"></i>
-                        </div>
+                    </article>
 
-                        <div class="service-row">
-                            <div class="service-info">
-                                <h3>Pay-Per-Click (PPC) Ads</h3>
-                                <p>High ROI campaigns on Google, Facebook, and LinkedIn.</p>
-                            </div>
-                            <i class="fa-solid fa-bullseye service-icon"></i>
+                    <!-- Post 2 -->
+                    <article class="post-card">
+                        <div class="post-img-wrapper">
+                            <img src="https://picsum.photos/seed/code2/600/400" alt="Coding Setup">
                         </div>
+                        <div class="post-body">
+                            <span class="tag">Technology</span>
+                            <h3 class="post-title"><a href="#">10 VS Code Extensions You Need</a></h3>
+                            <p class="post-excerpt">Boost your productivity with these essential tools for developers.</p>
+                            <div class="post-footer">
+                                <span>David Lee</span>
+                                <time>Oct 20</time>
+                            </div>
+                        </div>
+                    </article>
 
-                        <div class="service-row">
-                            <div class="service-info">
-                                <h3>Email Marketing</h3>
-                                <p>Automated flows and newsletters that convert leads.</p>
-                            </div>
-                            <i class="fa-solid fa-envelope-open-text service-icon"></i>
+                    <!-- Post 3 -->
+                    <article class="post-card">
+                        <div class="post-img-wrapper">
+                            <img src="https://picsum.photos/seed/work3/600/400" alt="Workspace">
                         </div>
-                    </div>
+                        <div class="post-body">
+                            <span class="tag" style="background:#dcfce7; color:#16a34a;">Productivity</span>
+                            <h3 class="post-title"><a href="#">Remote Work: A Guide to Balance</a></h3>
+                            <p class="post-excerpt">Strategies to maintain work-life balance while working from home.</p>
+                            <div class="post-footer">
+                                <span>Emily Chen</span>
+                                <time>Oct 18</time>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="post-card">
+                        <div class="post-img-wrapper">
+                            <img src="https://picsum.photos/seed/cam4/600/400" alt="Camera">
+                        </div>
+                        <div class="post-body">
+                            <span class="tag" style="background:#ffedd5; color:#ea580c;">Photography</span>
+                            <h3 class="post-title"><a href="#">Mastering Light in Outdoor Photography</a></h3>
+                            <p class="post-excerpt">Understanding natural light is the key to stunning outdoor shots.</p>
+                            <div class="post-footer">
+                                <span>Mark Wilson</span>
+                                <time>Oct 15</time>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="post-card">
+                        <div class="post-img-wrapper">
+                            <img src="https://picsum.photos/seed/health5/600/400" alt="Healthy Food">
+                        </div>
+                        <div class="post-body">
+                            <span class="tag" style="background:#f3e8ff; color:#9333ea;">Lifestyle</span>
+                            <h3 class="post-title"><a href="#">Meal Prep for Busy Professionals</a></h3>
+                            <p class="post-excerpt">Save time and eat healthy with these simple weekly prep routines.</p>
+                            <div class="post-footer">
+                                <span>Sarah Jenkins</span>
+                                <time>Oct 12</time>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="post-card">
+                        <div class="post-img-wrapper">
+                            <img src="https://picsum.photos/seed/travel6/600/400" alt="Travel">
+                        </div>
+                        <div class="post-body">
+                            <span class="tag">Travel</span>
+                            <h3 class="post-title"><a href="#">Hidden Gems in Portugal</a></h3>
+                            <p class="post-excerpt">Discover the less-traveled paths and breathtaking views of Portugal.</p>
+                            <div class="post-footer">
+                                <span>James Doe</span>
+                                <time>Oct 10</time>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- About Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">About Lumina</h3>
+                    <p style="color: var(--secondary-color); font-size: 0.95rem; margin-bottom: 15px;">
+                        Lumina is a digital space dedicated to sharing insights on technology, design, and modern living. We curate stories that inspire and educate.
+                    </p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600;">Read more →</a>
                 </div>
 
-                <!-- Abstract Visual on the side -->
-                <div style="display: flex; align-items: center; justify-content: center;">
-                    <img src="https://picsum.photos/seed/abstractart/600/600" style="border-radius: 30px; box-shadow: 0 20px 50px rgba(79, 70, 229, 0.2);" alt="Digital Art">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Ready to <span class="gradient-text">Grow?</span></h2>
-                    <p>Let's discuss how we can transform your digital footprint. Reach out to us directly or fill out the form.</p>
-                    
-                    <div style="margin-top: 40px;">
-                        <p style="font-weight: 600; color: #fff;">Contact Us Directly:</p>
-                        <div class="email-box">
-                            <i class="fa-solid fa-at"></i>
-                            <a href="mailto:kinzashamraiz4@gmail.com">kinzashamraiz4@gmail.com</a>
-                        </div>
-                    </div>
+                <!-- Categories Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#">Technology <span class="count">12</span></a></li>
+                        <li><a href="#">Design <span class="count">08</span></a></li>
+                        <li><a href="#">Lifestyle <span class="count">15</span></a></li>
+                        <li><a href="#">Photography <span class="count">05</span></a></li>
+                        <li><a href="#">Travel <span class="count">07</span></a></li>
+                    </ul>
                 </div>
 
-                <div class="contact-form">
-                    <h3 style="margin-bottom: 20px; text-align: center;">Send a Message</h3>
-                    <form onsubmit="event.preventDefault(); showThankYou();">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Interested Service</label>
-                            <select id="service" class="form-control">
-                                <option>SEO Optimization</option>
-                                <option>Social Media</option>
-                                <option>AI Marketing</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="4" class="form-control" placeholder="Tell us about your project..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Request</button>
+                <!-- Newsletter Widget -->
+                <div class="widget" id="newsletter">
+                    <h3 class="widget-title">Join the Newsletter</h3>
+                    <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
+                        Get the latest posts delivered right to your inbox. No spam, ever.
+                    </p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <!-- UPDATED: Added value attribute with the specific email -->
+                        <input type="email" value="ahmedtariq0129@gmail.com" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
                     </form>
-                    <div id="form-message" style="margin-top: 15px; text-align: center; color: var(--accent); display: none;">
-                        Thanks! We'll contact you at kinzashamraiz4@gmail.com shortly.
+                </div>
+
+                <!-- Popular Tags Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">Popular Tags</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#webdev</a>
+                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#ai</a>
+                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#minimal</a>
+                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#career</a>
+                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#coding</a>
                     </div>
                 </div>
-            </div>
+
+            </aside>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">NexGen<span>Digital</span></div>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Lumina.</h2>
+                    <p>Sharing knowledge and inspiration for the modern web. Built with clean code and passion.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Newest</a></li>
+                        <li><a href="#">Staff Picks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="copyright">&copy; 2024 NexGen Digital Marketing. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2023 Lumina Blog. All rights reserved. Designed for demonstration.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Simple Script for Interactions -->
     <script>
-        // Toggle Mobile Menu
+        // Simple script to toggle mobile menu
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
-            nav.classList.toggle('active');
+            const currentDisplay = window.getComputedStyle(nav).display;
+            
+            if (currentDisplay === 'none') {
+                nav.style.display = 'flex';
+                nav.classList.add('active');
+            } else {
+                nav.style.display = 'none';
+                nav.classList.remove('active');
+            }
         }
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
+        // Ensure menu resets correctly on window resize
+        window.addEventListener('resize', function() {
+            const nav = document.getElementById('navLinks');
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+                nav.classList.remove('active');
+            } else {
+                nav.style.display = 'none';
+            }
         });
-
-        // Simple Form Feedback (No alerts)
-        function showThankYou() {
-            const btn = document.querySelector('form button');
-            const msg = document.getElementById('form-message');
-            
-            btn.innerHTML = 'Sent <i class="fa-solid fa-check"></i>';
-            btn.style.background = '#10b981'; // Green color
-            msg.style.display = 'block';
-            
-            // Reset visual feedback after 3 seconds
-            setTimeout(() => {
-                btn.innerHTML = 'Send Request';
-                btn.style.background = ''; // Revert to CSS gradient
-                msg.style.display = 'none';
-                document.querySelector('form').reset();
-            }, 4000);
-        }
     </script>
 </body>
 </html>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinzashamraiz Website</title>
-</head>
-
-
-    <!-- Adsterra Popunder Ad Code -->
-    <script src="https://pl28641631.effectivegatecpm.com/04/ca/bd/04cabdd47fd76b13e33304e5ef0e7228.js"></script>
-
-</body>
-</html>
+        
