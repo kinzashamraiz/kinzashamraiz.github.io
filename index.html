@@ -10,708 +10,497 @@
     <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g"
         head>
              
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina | Modern Blog & Insights</title>
+    <title>The Art of Minimalist Living</title>
+    <meta name="description" content="Small Steps to a Sustainable Future. A guide to minimalist living and sustainability.">
+    
     <style>
         /* --- CSS Variables & Reset --- */
         :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --secondary-color: #475569;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --container-width: 1200px;
-            --radius: 12px;
+            /* Palette: Earthy, calm, and high contrast for readability */
+            --color-primary: #4a6c56;   /* Sage Green */
+            --color-primary-dark: #355040;
+            --color-accent: #d4a373;    /* Soft Sand/Gold */
+            --color-bg: #f9f8f4;        /* Off-white/Cream */
+            --color-surface: #ffffff;   /* Pure White */
+            --color-text-main: #2c3e50; /* Dark Charcoal */
+            --color-text-muted: #5d6d7e;
+            
+            /* Spacing & Layout */
+            --container-width: 1000px;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            /* Typography */
+            --font-heading: 'Georgia', 'Times New Roman', serif;
+            --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            
+            /* Effects */
+            --shadow-card: 0 10px 30px -10px rgba(0,0,0,0.08);
+            --radius-md: 12px;
+            --transition: all 0.3s ease;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: var(--font-main);
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.2s ease;
-        }
-
-        ul {
-            list-style: none;
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            line-height: 1.7;
+            font-size: 18px;
         }
 
         img {
             max-width: 100%;
+            height: auto;
             display: block;
-            object-fit: cover;
         }
 
-        /* --- Layout Utility --- */
+        /* --- Typography --- */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--color-primary);
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: var(--spacing-md);
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Decorative underline for H2 */
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-accent);
+            margin-top: var(--spacing-xs);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--color-text-main);
+        }
+
+        p {
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-muted);
+        }
+
+        /* --- Layout Utilities --- */
         .container {
+            width: 90%;
             max-width: var(--container-width);
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--spacing-sm);
         }
 
-        /* --- Header & Navigation --- */
+        section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        /* --- Navigation --- */
         header {
-            background: var(--card-bg);
-            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: var(--spacing-sm) 0;
         }
 
-        .nav-container {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-main);
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: var(--spacing-md);
+            list-style: none;
         }
 
         .nav-links a {
-            font-weight: 500;
-            color: var(--secondary-color);
+            text-decoration: none;
+            color: var(--color-text-main);
             font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
         }
 
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary-color);
-        }
-
-        .btn-subscribe {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s;
-        }
-
-        .btn-subscribe:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .nav-links a:hover {
+            color: var(--color-primary);
         }
 
         /* --- Hero Section --- */
         .hero {
-            padding: 60px 0;
-        }
-
-        .hero-card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
+            position: relative;
+            padding: var(--spacing-xl) 0;
+            background: linear-gradient(to bottom, var(--color-bg) 0%, #e8e4da 100%);
+            text-align: center;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            min-height: 400px;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 100%;
         }
 
         .hero-content {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            background-color: #dbeafe;
-            color: var(--primary-color);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
+        .hero-subtitle {
             text-transform: uppercase;
-            margin-bottom: 16px;
-            width: fit-content;
-        }
-
-        .hero-title {
-            font-size: 2.25rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-
-        .hero-excerpt {
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-size: 1.1rem;
-        }
-
-        .author-meta {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: auto;
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-
-        .author-info small {
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
             display: block;
-            color: var(--text-muted);
-            font-size: 0.85rem;
         }
 
-        /* --- Main Content Grid --- */
-        .content-wrapper {
-            padding: 40px 0 80px;
-            display: grid;
-            grid-template-columns: 2fr 1fr; /* Blog posts : Sidebar */
-            gap: 40px;
+        .hero-img {
+            margin-top: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
         }
 
-        /* --- Blog Feed --- */
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 12px;
-        }
-
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .post-card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .post-img-wrapper {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .post-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s;
-        }
-
-        .post-card:hover .post-img-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .post-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .post-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        .post-excerpt {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .post-footer {
-            border-top: 1px solid var(--border-color);
-            padding-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* --- Sidebar --- */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .widget {
-            background: var(--card-bg);
-            padding: 24px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border-color);
-        }
-
-        .widget-title {
+        /* --- Introduction Section --- */
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
             font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--text-main);
+            color: var(--color-text-main);
         }
 
-        .category-list li {
-            margin-bottom: 10px;
+        /* --- Why Section (Split Layout) --- */
+        .why-section {
+            background-color: var(--color-surface);
         }
 
-        .category-list a {
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .why-content p {
+            font-size: 1.05rem;
+        }
+
+        .why-image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        /* --- Steps Section (Cards) --- */
+        .steps-section {
+            background-color: var(--color-bg);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .card {
+            background: var(--color-surface);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            border-top: 4px solid var(--color-primary);
             display: flex;
-            justify-content: space-between;
-            color: var(--secondary-color);
-            padding: 4px 0;
-            border-bottom: 1px dashed var(--border-color);
+            flex-direction: column;
         }
 
-        .category-list a:hover {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.12);
         }
 
-        .count {
-            background: #f1f5f9;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #eef4f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
         }
 
-        .newsletter-form input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-bottom: 10px;
-            font-family: inherit;
+        .card h3 {
+            margin-bottom: var(--spacing-xs);
         }
 
-        .newsletter-form button {
-            width: 100%;
-            background: var(--text-main);
+        .card p {
+            flex-grow: 1;
+        }
+
+        /* --- Bigger Picture Section --- */
+        .impact-section {
+            background-color: var(--color-primary-dark);
+            color: var(--color-surface);
+            text-align: center;
+        }
+
+        .impact-section h2 {
+            color: var(--color-surface);
+        }
+        
+        .impact-section h2::after {
+            background-color: var(--color-accent);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .impact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .impact-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        /* --- Contact Section (New) --- */
+        .contact-section {
+            background-color: var(--color-surface);
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: #eef4f0;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--color-primary);
             color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: 600;
-            transition: background 0.2s;
+            margin-top: var(--spacing-md);
+            transition: var(--transition);
         }
 
-        .newsletter-form button:hover {
-            background: black;
+        .contact-btn:hover {
+            background-color: var(--color-primary-dark);
+            transform: scale(1.05);
         }
 
         /* --- Footer --- */
         footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 60px 0 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand h2 {
-            color: white;
-            margin-bottom: 16px;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
-
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-col a:hover {
-            color: white;
-        }
-
-        .copyright {
+            background-color: var(--color-text-main);
+            color: rgba(255,255,255,0.6);
             text-align: center;
-            border-top: 1px solid #1e293b;
-            padding-top: 20px;
+            padding: var(--spacing-md) 0;
             font-size: 0.9rem;
         }
 
         /* --- Responsive Design --- */
-        @media (max-width: 900px) {
-            .hero-card {
-                grid-template-columns: 1fr;
-                min-height: auto;
-            }
-            .hero-image {
-                height: 250px;
-            }
-            .content-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                order: 2; /* Move sidebar below content on mobile */
-            }
-        }
-
         @media (max-width: 768px) {
-            .nav-links, .btn-subscribe {
-                display: none; /* In a real app, we'd add JS to toggle this */
-            }
-            .menu-toggle {
-                display: block;
-            }
-            /* Mobile Menu Logic (Pure CSS via Checkbox hack or simple JS) */
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: white;
-                padding: 20px;
-                box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-                border-bottom: 1px solid var(--border-color);
-            }
-            .footer-grid {
+            .split-layout {
                 grid-template-columns: 1fr;
-                text-align: center;
+            }
+            
+            .nav-links {
+                display: none; /* Simple hiding for mobile, keeping it clean/static */
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-img {
+                margin-top: var(--spacing-md);
+            }
+            
+            .contact-box {
+                padding: var(--spacing-md);
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">Lumina<span>.</span></a>
-            
-            <nav class="nav-links" id="navLinks">
-                <a href="#" class="active">Home</a>
-                <a href="#">Technology</a>
-                <a href="#">Design</a>
-                <a href="#">Lifestyle</a>
-                <a href="#">About</a>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <!-- Simple SVG Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88a5.9 5.9 0 0 1-8.48 8.3A5.9 5.9 0 0 1 1.63 9.65L12 2.69z"></path></svg>
+                    Minimalist Living
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#why">Why It Matters</a></li>
+                    <li><a href="#steps">Action Steps</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-
-            <a href="#newsletter" class="btn-subscribe">Subscribe</a>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <article class="hero-card">
-                    <img src="https://picsum.photos/seed/techhero/800/600" alt="Featured Post" class="hero-image">
-                    <div class="hero-content">
-                        <span class="tag">Featured</span>
-                        <h1 class="hero-title">The Future of Artificial Intelligence in Creative Industries</h1>
-                        <p class="hero-excerpt">How AI tools are reshaping the way we design, write, and create art. Is human creativity at risk, or is it evolving into something new?</p>
-                        <div class="author-meta">
-                            <img src="https://picsum.photos/seed/user1/100/100" alt="Author" class="author-avatar">
-                            <div class="author-info">
-                                <span>Sarah Jenkins</span>
-                                <small>Oct 24, 2023 · 6 min read</small>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Main Layout -->
-        <div class="container content-wrapper">
-            
-            <!-- Latest Posts -->
-            <section class="posts-feed">
-                <h2 class="section-title">Latest Articles</h2>
-                
-                <div class="posts-grid">
-                    <!-- Post 1 -->
-                    <article class="post-card">
-                        <div class="post-img-wrapper">
-                            <img src="https://picsum.photos/seed/des1/600/400" alt="Minimalism Design">
-                        </div>
-                        <div class="post-body">
-                            <span class="tag" style="background:#fce7f3; color:#db2777;">Design</span>
-                            <h3 class="post-title"><a href="#">Embracing Minimalism in 2024 Web Design</a></h3>
-                            <p class="post-excerpt">Why less is more when it comes to user interface and user experience.</p>
-                            <div class="post-footer">
-                                <span>Alex Morgan</span>
-                                <time>Oct 22</time>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 2 -->
-                    <article class="post-card">
-                        <div class="post-img-wrapper">
-                            <img src="https://picsum.photos/seed/code2/600/400" alt="Coding Setup">
-                        </div>
-                        <div class="post-body">
-                            <span class="tag">Technology</span>
-                            <h3 class="post-title"><a href="#">10 VS Code Extensions You Need</a></h3>
-                            <p class="post-excerpt">Boost your productivity with these essential tools for developers.</p>
-                            <div class="post-footer">
-                                <span>David Lee</span>
-                                <time>Oct 20</time>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 3 -->
-                    <article class="post-card">
-                        <div class="post-img-wrapper">
-                            <img src="https://picsum.photos/seed/work3/600/400" alt="Workspace">
-                        </div>
-                        <div class="post-body">
-                            <span class="tag" style="background:#dcfce7; color:#16a34a;">Productivity</span>
-                            <h3 class="post-title"><a href="#">Remote Work: A Guide to Balance</a></h3>
-                            <p class="post-excerpt">Strategies to maintain work-life balance while working from home.</p>
-                            <div class="post-footer">
-                                <span>Emily Chen</span>
-                                <time>Oct 18</time>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 4 -->
-                    <article class="post-card">
-                        <div class="post-img-wrapper">
-                            <img src="https://picsum.photos/seed/cam4/600/400" alt="Camera">
-                        </div>
-                        <div class="post-body">
-                            <span class="tag" style="background:#ffedd5; color:#ea580c;">Photography</span>
-                            <h3 class="post-title"><a href="#">Mastering Light in Outdoor Photography</a></h3>
-                            <p class="post-excerpt">Understanding natural light is the key to stunning outdoor shots.</p>
-                            <div class="post-footer">
-                                <span>Mark Wilson</span>
-                                <time>Oct 15</time>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 5 -->
-                    <article class="post-card">
-                        <div class="post-img-wrapper">
-                            <img src="https://picsum.photos/seed/health5/600/400" alt="Healthy Food">
-                        </div>
-                        <div class="post-body">
-                            <span class="tag" style="background:#f3e8ff; color:#9333ea;">Lifestyle</span>
-                            <h3 class="post-title"><a href="#">Meal Prep for Busy Professionals</a></h3>
-                            <p class="post-excerpt">Save time and eat healthy with these simple weekly prep routines.</p>
-                            <div class="post-footer">
-                                <span>Sarah Jenkins</span>
-                                <time>Oct 12</time>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Post 6 -->
-                    <article class="post-card">
-                        <div class="post-img-wrapper">
-                            <img src="https://picsum.photos/seed/travel6/600/400" alt="Travel">
-                        </div>
-                        <div class="post-body">
-                            <span class="tag">Travel</span>
-                            <h3 class="post-title"><a href="#">Hidden Gems in Portugal</a></h3>
-                            <p class="post-excerpt">Discover the less-traveled paths and breathtaking views of Portugal.</p>
-                            <div class="post-footer">
-                                <span>James Doe</span>
-                                <time>Oct 10</time>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                
-                <!-- About Widget -->
-                <div class="widget">
-                    <h3 class="widget-title">About Lumina</h3>
-                    <p style="color: var(--secondary-color); font-size: 0.95rem; margin-bottom: 15px;">
-                        Lumina is a digital space dedicated to sharing insights on technology, design, and modern living. We curate stories that inspire and educate.
-                    </p>
-                    <a href="#" style="color: var(--primary-color); font-weight: 600;">Read more →</a>
-                </div>
-
-                <!-- Categories Widget -->
-                <div class="widget">
-                    <h3 class="widget-title">Categories</h3>
-                    <ul class="category-list">
-                        <li><a href="#">Technology <span class="count">12</span></a></li>
-                        <li><a href="#">Design <span class="count">08</span></a></li>
-                        <li><a href="#">Lifestyle <span class="count">15</span></a></li>
-                        <li><a href="#">Photography <span class="count">05</span></a></li>
-                        <li><a href="#">Travel <span class="count">07</span></a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter Widget -->
-                <div class="widget" id="newsletter">
-                    <h3 class="widget-title">Join the Newsletter</h3>
-                    <p style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 15px;">
-                        Get the latest posts delivered right to your inbox. No spam, ever.
-                    </p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
-                        <!-- UPDATED: Added value attribute with the specific email -->
-                        <input type="email" value="ahmedtariq0129@gmail.com" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-
-                <!-- Popular Tags Widget -->
-                <div class="widget">
-                    <h3 class="widget-title">Popular Tags</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#webdev</a>
-                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#ai</a>
-                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#minimal</a>
-                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#career</a>
-                        <a href="#" class="tag" style="background:#e2e8f0; color:#475569;">#coding</a>
-                    </div>
-                </div>
-
-            </aside>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-subtitle">Sustainable Future</span>
+            <h1>The Art of Minimalist Living</h1>
+            <p>Small Steps to a Sustainable Future</p>
         </div>
-    </main>
+        <div class="container">
+            <img src="https://picsum.photos/seed/nature1/1000/500" alt="Serene natural landscape representing minimalist living" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Introductory Text -->
+    <section id="intro">
+        <div class="container intro-text">
+            <p>In an era of "fast-everything"—from fashion to food—the concept of sustainable living often feels like an uphill battle. However, going green doesn't require moving to a cabin in the woods or completely overhauling your life overnight. It’s about intentionality. By making small, mindful shifts in our daily habits, we can significantly reduce our environmental footprint while actually improving our quality of life.</p>
+        </div>
+    </section>
+
+    <!-- Why Sustainability Section -->
+    <section id="why" class="why-section">
+        <div class="container">
+            <div class="split-layout">
+                <div class="why-image">
+                    <img src="https://picsum.photos/seed/home2/600/600" alt="A cozy, organized minimalist home interior">
+                </div>
+                <div class="why-content">
+                    <h2>Why Sustainability Starts at Home</h2>
+                    <p>Most of our environmental impact comes from the three "Cs": Consumption, Cleaning, and Commuting. When we address these, we create a ripple effect.</p>
+                    <p>Sustainable living isn't just about saving the planet; it’s about saving money and reducing the mental clutter that comes with "stuff."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actionable Steps Section -->
+    <section id="steps" class="steps-section">
+        <div class="container">
+            <h2>3 Actionable Steps to Get Started</h2>
+            <div class="steps-grid">
+                
+                <!-- Step 1 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <!-- Swap Icon -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                    </div>
+                    <h3>The "One-In, One-Out" Rule</h3>
+                    <p>To curb impulsive consumption, commit to removing one item from your home for every new item you bring in. This encourages you to value quality over quantity.</p>
+                </article>
+
+                <!-- Step 2 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <!-- Leaf/Eco Icon -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                    </div>
+                    <h3>Switch to "Green" Chemistry</h3>
+                    <p>Many household cleaners contain harsh chemicals that eventually end up in our waterways. Simple swaps, like using white vinegar and baking soda for scrubbing, are effective, cheap, and non-toxic.</p>
+                </article>
+
+                <!-- Step 3 -->
+                <article class="card">
+                    <div class="card-icon">
+                        <!-- Apple/Food Icon -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5"></path></svg>
+                    </div>
+                    <h3>Audit Your Food Waste</h3>
+                    <p>Food waste in landfills produces methane, a potent greenhouse gas. Start by planning your meals for just three days at a time to ensure everything in your fridge actually gets eaten.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bigger Picture Section -->
+    <section id="impact" class="impact-section">
+        <div class="container impact-content">
+            <h2>The Bigger Picture</h2>
+            <p>Sustainability is a marathon, not a sprint. The goal isn't to be "perfectly" zero-waste, but to have millions of people doing it "imperfectly." When we choose products with less packaging or support local businesses, we send a message to the market that the planet matters.</p>
+        </div>
+    </section>
+
+    <!-- NEW Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <h2>Get In Touch</h2>
+                <p>Have questions about minimalist living or want to share your journey? Feel free to reach out.</p>
+                <!-- Mailto link -->
+                <a href="mailto:kinzashamraiz2@gmail.com" class="contact-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    kinzashamraiz2@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h2>Lumina.</h2>
-                    <p>Sharing knowledge and inspiration for the modern web. Built with clean code and passion.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#">Popular</a></li>
-                        <li><a href="#">Trending</a></li>
-                        <li><a href="#">Newest</a></li>
-                        <li><a href="#">Staff Picks</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Social</h4>
-                    <ul>
-                        <li><a href="#">Twitter / X</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Lumina Blog. All rights reserved. Designed for demonstration.</p>
-            </div>
+            <p>&copy; 2023 Minimalist Living. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Simple script to toggle mobile menu
-        function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            const currentDisplay = window.getComputedStyle(nav).display;
-            
-            if (currentDisplay === 'none') {
-                nav.style.display = 'flex';
-                nav.classList.add('active');
-            } else {
-                nav.style.display = 'none';
-                nav.classList.remove('active');
-            }
-        }
-
-        // Ensure menu resets correctly on window resize
-        window.addEventListener('resize', function() {
-            const nav = document.getElementById('navLinks');
-            if (window.innerWidth > 768) {
-                nav.style.display = 'flex';
-                nav.classList.remove('active');
-            } else {
-                nav.style.display = 'none';
-            }
-        });
-    </script>
 </body>
-</html>
-        
+    </html>
