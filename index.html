@@ -10,116 +10,81 @@
     <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g"
         head>
              
-  <!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Talha Babar 💖</title>
     <style>
-        body {
-            background-color: #1a0514; /* Dark Purple theme like the video */
-            color: #ffb3d9;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .card-container {
-            width: 85%;
-            max-width: 350px;
-            padding: 25px;
-            border-radius: 30px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 105, 180, 0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
+        body { background-color: #1a0514; color: #ffb3d9; font-family: sans-serif; text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
+        .card { width: 85%; max-width: 350px; padding: 25px; border-radius: 30px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 105, 180, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .hidden { display: none; }
-        h1 { font-size: 2.2em; font-family: 'Brush Script MT', cursive; color: #ff4da6; }
-        .btn {
-            background: #ff4da6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
-            box-shadow: 0 4px 15px rgba(255, 77, 166, 0.4);
-        }
-        .cartoon-img { width: 120px; margin-bottom: 10px; border-radius: 20px; }
-        
-        /* Cuteness Meter */
+        h1 { font-size: 2.2em; color: #ff4da6; font-family: 'Brush Script MT', cursive; }
+        .btn { background: #ff4da6; color: white; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 15px; box-shadow: 0 4px 15px rgba(255, 77, 166, 0.4); }
+        .cartoon-img { width: 150px; height: auto; margin-bottom: 10px; border-radius: 15px; object-fit: cover; }
+        .talha-img { width: 180px; height: auto; border-radius: 20px; border: 2px solid #ff4da6; margin-bottom: 15px; }
         .progress-bar { width: 100%; height: 12px; background: #333; border-radius: 10px; margin: 20px 0; }
         .filler { height: 100%; width: 0%; background: linear-gradient(to right, #ff4da6, #ff85c2); border-radius: 10px; transition: 0.1s; }
-        
-        /* Tap boxes */
-        .tap-box {
-            background: rgba(255, 77, 166, 0.15);
-            margin: 10px 0;
-            padding: 12px;
-            border-radius: 15px;
-            border: 1px dashed #ff4da6;
-            cursor: pointer;
-            font-size: 0.9em;
-        }
+        .tap-box { background: rgba(255, 77, 166, 0.15); margin: 10px 0; padding: 12px; border-radius: 15px; border: 1px dashed #ff4da6; cursor: pointer; }
+        .final-text { font-size: 0.95em; line-height: 1.5; text-align: justify; padding: 0 5px; }
     </style>
 </head>
 <body>
 
-    <div class="card-container" id="s1">
-        <img src="https://media.tenor.com/79_uE_x5S7IAAAAi/cute-cat.gif" class="cartoon-img">
+    <div class="card" id="s1">
+        <img src="Cc22936412a2961206d441f094fb8e85.jpg" class="cartoon-img">
         <h1>Hey Handsome! ✨</h1>
-        <p>Talha Babar, do you know how much I adore you?</p>
-        <button class="btn" onclick="next(1,2); startMeter();">Let's check! 🤩</button>
+        <p>Do you even know how cute you are?</p>
+        <button class="btn" onclick="startMeter()">let's check 🤩</button>
     </div>
 
-    <div class="card-container hidden" id="s2">
-        <h2>Measuring Handsome Quotient...</h2>
+    <div class="card hidden" id="s2">
+        <h2>Measuring cuteness...</h2>
         <div class="progress-bar"><div class="filler" id="filler"></div></div>
         <h2 id="percent">0%</h2>
-        <p id="warn" class="hidden" style="color: #ff85c2;">⚠️ ERROR: TOO HANDSOME TO MEASURE!</p>
+        <p id="warn" class="hidden" style="color:#ff85c2;">⚠️ WARNING: TOO HANDSOME!</p>
         <button class="btn hidden" id="cbtn" onclick="next(2,3)">Continue →</button>
     </div>
 
-    <div class="card-container hidden" id="s3">
-        <p>Tap each heart for Talha... ❤️</p>
-        <div class="tap-box" onclick="this.innerText='I am really sorry for being annoying... 🥺'">💖 Tap Here</div>
-        <div class="tap-box" onclick="this.innerText='I didn\'t mean to upset my favorite person! 🫂'">💖 Tap Here</div>
-        <div class="tap-box" onclick="this.innerText='Maaf kar do na please? 🌹'">💖 Tap Here</div>
+    <div class="card hidden" id="s3">
+        <img src="4370b6a0c703d6129c1ab6246b360b91.jpg" class="cartoon-img">
+        <h2>Tap to reveal ❤️</h2>
+        <div class="tap-box" onclick="this.innerText='I am really sorry, Handsome... 🥺'">Tap Here</div>
+        <div class="tap-box" onclick="this.innerText='I didn\'t mean to upset my favorite person! 🫂'">Tap Here</div>
         <button class="btn" onclick="next(3,4)">Final Note 📝</button>
     </div>
 
-    <div class="card-container hidden" id="s4">
-        <img src="https://media.tenor.com/Z47F-vF_t90AAAAi/mochi-peach-cat-sorry.gif" class="cartoon-img">
-        <h1>Sorrrrry! 😭</h1>
-        <p><b>Talha Babar</b>, you are the most precious person in my life. I'm sorry if I wasted your time or hurt you. I promise to make it up to you! ❤️</p>
-        <p style="font-size: 0.8em;">I Love You! 🌸✨</p>
+    <div class="card hidden" id="s4" style="max-height: 90vh; overflow-y: auto;">
+        <img src="4370b6a0c703d6129c1ab6246b360b91.jpg" class="talha-img">
+        <h1 style="font-size: 1.8em;">Sorrrrry Handsome!</h1>
+        <div class="final-text">
+            <p>I am so incredibly sorry, <b>Handsome</b>.</p>
+            <p>I want you to know that you are truly one of a kind. You aren't just good-looking on the outside; you are such a <b>wonderful human being with a heart of gold</b>. You are so cute, so innocent, and honestly, the most amazing person in this entire world.</p>
+            <p>Having you as my friend is a blessing I don't ever want to take for granted. I am really sorry if I upset you or did anything to dim that beautiful smile of yours. Please forgive me, <b>Talha Babar</b>. You deserve nothing but the absolute best because you truly are the best! 🌍💖✨</p>
+        </div>
+        <p><b>I Promise to make it up to you! 🧸🫂</b></p>
     </div>
 
     <script>
-        function next(curr, next) {
-            document.getElementById('s' + curr).classList.add('hidden');
-            document.getElementById('s' + next).classList.remove('hidden');
+        function next(c, n) { 
+            document.getElementById('s'+c).classList.add('hidden'); 
+            document.getElementById('s'+n).classList.remove('hidden'); 
         }
 
         function startMeter() {
-            let width = 0;
-            let fill = document.getElementById('filler');
-            let txt = document.getElementById('percent');
+            next(1,2); 
+            let w = 0;
             let int = setInterval(() => {
-                if(width >= 150) {
-                    clearInterval(int);
-                    document.getElementById('warn').classList.remove('hidden');
-                    document.getElementById('cbtn').classList.remove('hidden');
-                } else {
-                    width++;
-                    if(width <= 100) fill.style.width = width + '%';
-                    txt.innerText = width + '%';
+                if(w >= 120) { 
+                    clearInterval(int); 
+                    document.getElementById('warn').classList.remove('hidden'); 
+                    document.getElementById('cbtn').classList.remove('hidden'); 
+                }
+                else { 
+                    w++; 
+                    if(w<=100) document.getElementById('filler').style.width = w+'%'; 
+                    document.getElementById('percent').innerText = w+'%'; 
                 }
             }, 40);
         }
