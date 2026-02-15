@@ -10,497 +10,120 @@
     <meta name="google-site-verification" content="au-jvQmpP2ZmCd6Vt-koVc7kCb6lO2gIDB3MZv6r26g"
         head>
              
-            <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art of Minimalist Living</title>
-    <meta name="description" content="Small Steps to a Sustainable Future. A guide to minimalist living and sustainability.">
-    
+    <title>For Talha Babar 💖</title>
     <style>
-        /* --- CSS Variables & Reset --- */
-        :root {
-            /* Palette: Earthy, calm, and high contrast for readability */
-            --color-primary: #4a6c56;   /* Sage Green */
-            --color-primary-dark: #355040;
-            --color-accent: #d4a373;    /* Soft Sand/Gold */
-            --color-bg: #f9f8f4;        /* Off-white/Cream */
-            --color-surface: #ffffff;   /* Pure White */
-            --color-text-main: #2c3e50; /* Dark Charcoal */
-            --color-text-muted: #5d6d7e;
-            
-            /* Spacing & Layout */
-            --container-width: 1000px;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            
-            /* Typography */
-            --font-heading: 'Georgia', 'Times New Roman', serif;
-            --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            
-            /* Effects */
-            --shadow-card: 0 10px 30px -10px rgba(0,0,0,0.08);
-            --radius-md: 12px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: var(--font-body);
-            background-color: var(--color-bg);
-            color: var(--color-text-main);
-            line-height: 1.7;
-            font-size: 18px;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* --- Typography --- */
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            color: var(--color-primary);
-            line-height: 1.2;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-        }
-
-        h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            margin-bottom: var(--spacing-md);
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Decorative underline for H2 */
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--color-accent);
-            margin-top: var(--spacing-xs);
-            border-radius: 2px;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            color: var(--color-text-main);
-        }
-
-        p {
-            margin-bottom: var(--spacing-sm);
-            color: var(--color-text-muted);
-        }
-
-        /* --- Layout Utilities --- */
-        .container {
-            width: 90%;
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 var(--spacing-sm);
-        }
-
-        section {
-            padding: var(--spacing-lg) 0;
-        }
-
-        /* --- Navigation --- */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: var(--spacing-sm) 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--color-primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: var(--spacing-md);
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--color-text-main);
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--color-primary);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            position: relative;
-            padding: var(--spacing-xl) 0;
-            background: linear-gradient(to bottom, var(--color-bg) 0%, #e8e4da 100%);
+            background-color: #1a0514; /* Dark Purple theme like the video */
+            color: #ffb3d9;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .hero-subtitle {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            color: var(--color-accent);
-            font-weight: 700;
-            margin-bottom: var(--spacing-sm);
-            display: block;
-        }
-
-        .hero-img {
-            margin-top: var(--spacing-lg);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-card);
-        }
-
-        /* --- Introduction Section --- */
-        .intro-text {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.1rem;
-            color: var(--color-text-main);
-        }
-
-        /* --- Why Section (Split Layout) --- */
-        .why-section {
-            background-color: var(--color-surface);
-        }
-
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-lg);
-            align-items: center;
-        }
-
-        .why-content p {
-            font-size: 1.05rem;
-        }
-
-        .why-image {
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-        }
-
-        /* --- Steps Section (Cards) --- */
-        .steps-section {
-            background-color: var(--color-bg);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-lg);
-        }
-
-        .card {
-            background: var(--color-surface);
-            padding: var(--spacing-md);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-card);
-            transition: var(--transition);
-            border-top: 4px solid var(--color-primary);
             display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.12);
-        }
-
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #eef4f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            margin-bottom: var(--spacing-sm);
-            color: var(--color-primary);
-        }
-
-        .card h3 {
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .card p {
-            flex-grow: 1;
-        }
-
-        /* --- Bigger Picture Section --- */
-        .impact-section {
-            background-color: var(--color-primary-dark);
-            color: var(--color-surface);
-            text-align: center;
-        }
-
-        .impact-section h2 {
-            color: var(--color-surface);
-        }
-        
-        .impact-section h2::after {
-            background-color: var(--color-accent);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .impact-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .impact-content p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-
-        /* --- Contact Section (New) --- */
-        .contact-section {
-            background-color: var(--color-surface);
-            text-align: center;
-        }
-
-        .contact-box {
-            background-color: #eef4f0;
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-md);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-btn {
-            display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background-color: var(--color-primary);
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card-container {
+            width: 85%;
+            max-width: 350px;
+            padding: 25px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 105, 180, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .hidden { display: none; }
+        h1 { font-size: 2.2em; font-family: 'Brush Script MT', cursive; color: #ff4da6; }
+        .btn {
+            background: #ff4da6;
             color: white;
-            padding: 1rem 2rem;
+            border: none;
+            padding: 12px 25px;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: var(--spacing-md);
-            transition: var(--transition);
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(255, 77, 166, 0.4);
         }
-
-        .contact-btn:hover {
-            background-color: var(--color-primary-dark);
-            transform: scale(1.05);
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--color-text-main);
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            padding: var(--spacing-md) 0;
-            font-size: 0.9rem;
-        }
-
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .split-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none; /* Simple hiding for mobile, keeping it clean/static */
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-img {
-                margin-top: var(--spacing-md);
-            }
-            
-            .contact-box {
-                padding: var(--spacing-md);
-            }
+        .cartoon-img { width: 120px; margin-bottom: 10px; border-radius: 20px; }
+        
+        /* Cuteness Meter */
+        .progress-bar { width: 100%; height: 12px; background: #333; border-radius: 10px; margin: 20px 0; }
+        .filler { height: 100%; width: 0%; background: linear-gradient(to right, #ff4da6, #ff85c2); border-radius: 10px; transition: 0.1s; }
+        
+        /* Tap boxes */
+        .tap-box {
+            background: rgba(255, 77, 166, 0.15);
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 15px;
+            border: 1px dashed #ff4da6;
+            cursor: pointer;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <!-- Simple SVG Icon -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88a5.9 5.9 0 0 1-8.48 8.3A5.9 5.9 0 0 1 1.63 9.65L12 2.69z"></path></svg>
-                    Minimalist Living
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#why">Why It Matters</a></li>
-                    <li><a href="#steps">Action Steps</a></li>
-                    <li><a href="#impact">Impact</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="card-container" id="s1">
+        <img src="https://media.tenor.com/79_uE_x5S7IAAAAi/cute-cat.gif" class="cartoon-img">
+        <h1>Hey Handsome! ✨</h1>
+        <p>Talha Babar, do you know how much I adore you?</p>
+        <button class="btn" onclick="next(1,2); startMeter();">Let's check! 🤩</button>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <span class="hero-subtitle">Sustainable Future</span>
-            <h1>The Art of Minimalist Living</h1>
-            <p>Small Steps to a Sustainable Future</p>
-        </div>
-        <div class="container">
-            <img src="https://picsum.photos/seed/nature1/1000/500" alt="Serene natural landscape representing minimalist living" class="hero-img">
-        </div>
-    </section>
+    <div class="card-container hidden" id="s2">
+        <h2>Measuring Handsome Quotient...</h2>
+        <div class="progress-bar"><div class="filler" id="filler"></div></div>
+        <h2 id="percent">0%</h2>
+        <p id="warn" class="hidden" style="color: #ff85c2;">⚠️ ERROR: TOO HANDSOME TO MEASURE!</p>
+        <button class="btn hidden" id="cbtn" onclick="next(2,3)">Continue →</button>
+    </div>
 
-    <!-- Introductory Text -->
-    <section id="intro">
-        <div class="container intro-text">
-            <p>In an era of "fast-everything"—from fashion to food—the concept of sustainable living often feels like an uphill battle. However, going green doesn't require moving to a cabin in the woods or completely overhauling your life overnight. It’s about intentionality. By making small, mindful shifts in our daily habits, we can significantly reduce our environmental footprint while actually improving our quality of life.</p>
-        </div>
-    </section>
+    <div class="card-container hidden" id="s3">
+        <p>Tap each heart for Talha... ❤️</p>
+        <div class="tap-box" onclick="this.innerText='I am really sorry for being annoying... 🥺'">💖 Tap Here</div>
+        <div class="tap-box" onclick="this.innerText='I didn\'t mean to upset my favorite person! 🫂'">💖 Tap Here</div>
+        <div class="tap-box" onclick="this.innerText='Maaf kar do na please? 🌹'">💖 Tap Here</div>
+        <button class="btn" onclick="next(3,4)">Final Note 📝</button>
+    </div>
 
-    <!-- Why Sustainability Section -->
-    <section id="why" class="why-section">
-        <div class="container">
-            <div class="split-layout">
-                <div class="why-image">
-                    <img src="https://picsum.photos/seed/home2/600/600" alt="A cozy, organized minimalist home interior">
-                </div>
-                <div class="why-content">
-                    <h2>Why Sustainability Starts at Home</h2>
-                    <p>Most of our environmental impact comes from the three "Cs": Consumption, Cleaning, and Commuting. When we address these, we create a ripple effect.</p>
-                    <p>Sustainable living isn't just about saving the planet; it’s about saving money and reducing the mental clutter that comes with "stuff."</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="card-container hidden" id="s4">
+        <img src="https://media.tenor.com/Z47F-vF_t90AAAAi/mochi-peach-cat-sorry.gif" class="cartoon-img">
+        <h1>Sorrrrry! 😭</h1>
+        <p><b>Talha Babar</b>, you are the most precious person in my life. I'm sorry if I wasted your time or hurt you. I promise to make it up to you! ❤️</p>
+        <p style="font-size: 0.8em;">I Love You! 🌸✨</p>
+    </div>
 
-    <!-- Actionable Steps Section -->
-    <section id="steps" class="steps-section">
-        <div class="container">
-            <h2>3 Actionable Steps to Get Started</h2>
-            <div class="steps-grid">
-                
-                <!-- Step 1 -->
-                <article class="card">
-                    <div class="card-icon">
-                        <!-- Swap Icon -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
-                    </div>
-                    <h3>The "One-In, One-Out" Rule</h3>
-                    <p>To curb impulsive consumption, commit to removing one item from your home for every new item you bring in. This encourages you to value quality over quantity.</p>
-                </article>
+    <script>
+        function next(curr, next) {
+            document.getElementById('s' + curr).classList.add('hidden');
+            document.getElementById('s' + next).classList.remove('hidden');
+        }
 
-                <!-- Step 2 -->
-                <article class="card">
-                    <div class="card-icon">
-                        <!-- Leaf/Eco Icon -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-                    </div>
-                    <h3>Switch to "Green" Chemistry</h3>
-                    <p>Many household cleaners contain harsh chemicals that eventually end up in our waterways. Simple swaps, like using white vinegar and baking soda for scrubbing, are effective, cheap, and non-toxic.</p>
-                </article>
-
-                <!-- Step 3 -->
-                <article class="card">
-                    <div class="card-icon">
-                        <!-- Apple/Food Icon -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5"></path></svg>
-                    </div>
-                    <h3>Audit Your Food Waste</h3>
-                    <p>Food waste in landfills produces methane, a potent greenhouse gas. Start by planning your meals for just three days at a time to ensure everything in your fridge actually gets eaten.</p>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Bigger Picture Section -->
-    <section id="impact" class="impact-section">
-        <div class="container impact-content">
-            <h2>The Bigger Picture</h2>
-            <p>Sustainability is a marathon, not a sprint. The goal isn't to be "perfectly" zero-waste, but to have millions of people doing it "imperfectly." When we choose products with less packaging or support local businesses, we send a message to the market that the planet matters.</p>
-        </div>
-    </section>
-
-    <!-- NEW Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-box">
-                <h2>Get In Touch</h2>
-                <p>Have questions about minimalist living or want to share your journey? Feel free to reach out.</p>
-                <!-- Mailto link -->
-                <a href="mailto:kinzashamraiz2@gmail.com" class="contact-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    kinzashamraiz2@gmail.com
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Minimalist Living. All rights reserved.</p>
-        </div>
-    </footer>
-
+        function startMeter() {
+            let width = 0;
+            let fill = document.getElementById('filler');
+            let txt = document.getElementById('percent');
+            let int = setInterval(() => {
+                if(width >= 150) {
+                    clearInterval(int);
+                    document.getElementById('warn').classList.remove('hidden');
+                    document.getElementById('cbtn').classList.remove('hidden');
+                } else {
+                    width++;
+                    if(width <= 100) fill.style.width = width + '%';
+                    txt.innerText = width + '%';
+                }
+            }, 40);
+        }
+    </script>
 </body>
-    </html>
+</html>
+    
